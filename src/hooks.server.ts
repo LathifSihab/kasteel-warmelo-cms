@@ -6,6 +6,9 @@ import { isLang, parseLegacyHref, parsePath, pathFor, DEFAULT_LANG } from '#lib/
 export const handle: Handle = async ({ event, resolve }) => {
 	const { url } = event;
 
+	// www.kasteelwarmelo.nl → kasteelwarmelo.nl (both domains are attached to the Worker)
+	if (url.hostname.startsWith('www.')) redirect(301, url.href.replace('//www.', '//'));
+
 	// Old static URLs: /tuinen.html?lang=en → /en/tuinen, /nl/… → /…
 	const legacy = parseLegacyHref(url.pathname.slice(1));
 	if (legacy || url.pathname === '/nl' || url.pathname.startsWith('/nl/')) {

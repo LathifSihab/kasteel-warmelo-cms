@@ -8,6 +8,11 @@
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
 	},
+	// Workers Custom Domains: Cloudflare creates the DNS records and certificates on deploy
+	"routes": [
+		{ "pattern": "kasteelwarmelo.nl", "custom_domain": true },
+		{ "pattern": "www.kasteelwarmelo.nl", "custom_domain": true }
+	],
 	"workers_dev": true,
 	"preview_urls": true
 }

@@ -10,6 +10,8 @@ import { readFileSync } from 'node:fs';
 import { editableKeys } from '../src/lib/content/fields.ts';
 import { publishDrafts, saveDrafts, type Change } from '../src/lib/server/content.ts';
 import { createS3 } from '../src/lib/server/s3.ts';
+import { parseLegacyHref } from '../src/lib/site/pages.ts';
+import type { ButtonSettings } from '../src/lib/site/site.ts';
 import { connect } from './db.ts';
 
 type Json = Record<string, unknown>;
@@ -52,7 +54,21 @@ for (const [k, v] of entries(legacy.prices)) put('cms:price-' + k, '*', v);
 for (const [k, v] of entries(legacy.menu)) put('menuprice:' + k, '*', v);
 for (const [k, v] of entries(legacy.links)) put('link:' + k, '*', v);
 for (const [k, v] of entries(legacy.contact)) put('contact:' + k, '*', v);
-for (const [k, v] of entries(legacy.buttons)) put('btn:' + k, '*', v);
+// the old CMS also stored bare page names ('openingstijden'); store them like the site's own links,
+// or they stay relative and lose the language (/en → /openingstijden)
+const pageLink = (href: unknown) => {
+	const m = typeof href === 'string' ? href.match(/^([a-z-]+)(#.*)?$/) : null;
+	const link = m && `./${m[1]}.html${m[2] ?? ''}`;
+	return link && parseLegacyHref(link) ? link : href;
+};
+for (const [k, v] of entries(legacy.buttons)) {
+	const b = v as ButtonSettings;
+	put('btn:' + k, '*', {
+		...b,
+		href: pageLink(b.href),
+		alt: b.alt && { ...b.alt, href: pageLink(b.alt.href) }
+	});
+}
 for (const [k, v] of entries(legacy.imgfit)) put('fit:' + k, '*', v);
 
 // ── events: the old CMS showed these texts in every language; they are imported as Dutch
