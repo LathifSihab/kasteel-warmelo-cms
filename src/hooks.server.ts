@@ -6,8 +6,12 @@ import { isLang, parseLegacyHref, parsePath, pathFor, DEFAULT_LANG } from '#lib/
 export const handle: Handle = async ({ event, resolve }) => {
 	const { url } = event;
 
-	// www.kasteelwarmelo.nl → kasteelwarmelo.nl (both domains are attached to the Worker)
-	if (url.hostname.startsWith('www.')) redirect(301, url.href.replace('//www.', '//'));
+	// www.kasteelwarmelo.nl → kasteelwarmelo.nl (both domains are attached to the Worker).
+	// Another host, so SvelteKit needs it allowed or it throws (a 500).
+	if (url.hostname.startsWith('www.')) {
+		const bare = url.origin.replace('//www.', '//');
+		redirect(301, bare + url.pathname + url.search, { external: [bare] });
+	}
 
 	// Old static URLs: /tuinen.html?lang=en → /en/tuinen, /nl/… → /…
 	const legacy = parseLegacyHref(url.pathname.slice(1));
