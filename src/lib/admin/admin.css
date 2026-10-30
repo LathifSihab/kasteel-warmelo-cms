@@ -151,6 +151,7 @@ button:disabled,
 	display: flex;
 	gap: 2px;
 	flex: 1;
+	min-width: 0;
 	overflow-x: auto;
 }
 .pages button,
@@ -490,10 +491,18 @@ button:disabled,
 
 @media (max-width: 900px) {
 	.app {
-		grid-template-columns: 1fr;
+		/* minmax: the top bar's buttons must not widen the page past the screen */
+		grid-template-columns: minmax(0, 1fr);
 		grid-template-rows: auto 1fr 50vh;
 		height: auto;
 		min-height: 100vh;
+	}
+	.top {
+		flex-wrap: wrap;
+		gap: 8px 14px;
+	}
+	.pages {
+		flex-basis: 100%;
 	}
 	.panel {
 		max-height: 70vh;

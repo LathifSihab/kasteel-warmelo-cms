@@ -254,7 +254,7 @@
 <section class="parallax-section">
 	<div
 		class="parallax-section__bg"
-		style:background-image={c.bg('tuinen-bg-new-english-garden-panoramic')}
+		style={c.bgStyle('tuinen-bg-new-english-garden-panoramic')}
 		data-edit={c.edit('img:tuinen-bg-new-english-garden-panoramic')}
 	></div>
 	<div class="parallax-section__overlay"></div>

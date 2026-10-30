@@ -27,6 +27,8 @@ export interface Field {
 	default?: string;
 	/** button: may have a seasonal version */
 	seasonal?: boolean;
+	/** image: the page sizes its frame with the crop's height (c.imgHeight) */
+	height?: boolean;
 }
 
 export interface Section {

@@ -270,7 +270,6 @@
 						class="gallery__item"
 						style="flex:5;min-height:0;"
 						data-lightbox={c.img('zand-rattenvanger')}
-						style:height={c.imgHeight('zand-rattenvanger')}
 					>
 						<img
 							class={c.imgClass('zand-rattenvanger', '')}
@@ -288,7 +287,6 @@
 						class="gallery__item"
 						style="flex:7;min-height:0;"
 						data-lightbox={c.img('zand-was-2')}
-						style:height={c.imgHeight('zand-was-2')}
 					>
 						<img
 							loading="lazy"
@@ -400,7 +398,7 @@
 <section class="parallax-section">
 	<div
 		class="parallax-section__bg"
-		style:background-image={c.bg('zandsculpturen-bg-new-lake-rhodo-panoramic')}
+		style={c.bgStyle('zandsculpturen-bg-new-lake-rhodo-panoramic')}
 		data-edit={c.edit('img:zandsculpturen-bg-new-lake-rhodo-panoramic')}
 	></div>
 	<div class="parallax-section__overlay"></div>

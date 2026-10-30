@@ -472,7 +472,8 @@
 						{
 							"key": "img:index-kinderen",
 							"type": "image",
-							"label": "Afbeelding: Kinderen bij de zandsculpturen"
+							"label": "Afbeelding: Kinderen bij de zandsculpturen",
+							"height": true
 						}
 					]
 				},
@@ -565,17 +566,20 @@
 						{
 							"key": "img:zand-was",
 							"type": "image",
-							"label": "Afbeelding: Zandsculptuur"
+							"label": "Afbeelding: Zandsculptuur",
+							"height": true
 						},
 						{
 							"key": "img:zand-img9647",
 							"type": "image",
-							"label": "Afbeelding: Zandsculptuur"
+							"label": "Afbeelding: Zandsculptuur",
+							"height": true
 						},
 						{
 							"key": "img:zand-koe",
 							"type": "image",
-							"label": "Afbeelding: Zandsculptuur"
+							"label": "Afbeelding: Zandsculptuur",
+							"height": true
 						}
 					]
 				},
@@ -627,27 +631,32 @@
 						{
 							"key": "img:zand-img8341",
 							"type": "image",
-							"label": "Afbeelding: Zandsculptuur"
+							"label": "Afbeelding: Zandsculptuur",
+							"height": true
 						},
 						{
 							"key": "img:zand-harrypotter",
 							"type": "image",
-							"label": "Afbeelding: Harry Potter"
+							"label": "Afbeelding: Harry Potter",
+							"height": true
 						},
 						{
 							"key": "img:zand-schutterij",
 							"type": "image",
-							"label": "Afbeelding: Schutterij"
+							"label": "Afbeelding: Schutterij",
+							"height": true
 						},
 						{
 							"key": "img:zand-dino",
 							"type": "image",
-							"label": "Afbeelding: Dino sculptuur"
+							"label": "Afbeelding: Dino sculptuur",
+							"height": true
 						},
 						{
 							"key": "img:zand-koe-2",
 							"type": "image",
-							"label": "Afbeelding: Koe sculptuur"
+							"label": "Afbeelding: Koe sculptuur",
+							"height": true
 						},
 						{
 							"key": "img:zand-rattenvanger",
@@ -662,7 +671,8 @@
 						{
 							"key": "img:zand-img9647-2",
 							"type": "image",
-							"label": "Afbeelding: Sculptuur"
+							"label": "Afbeelding: Sculptuur",
+							"height": true
 						}
 					]
 				},
@@ -673,7 +683,8 @@
 						{
 							"key": "img:zand-kinderen",
 							"type": "image",
-							"label": "Afbeelding: Kinderen bij zandsculpturen"
+							"label": "Afbeelding: Kinderen bij zandsculpturen",
+							"height": true
 						},
 						{
 							"key": "sand.kids.label",
@@ -850,12 +861,14 @@
 						{
 							"key": "img:tuinen-zomer",
 							"type": "image",
-							"label": "Afbeelding: Vijver met rododendrons in het park van Kasteel Warmelo"
+							"label": "Afbeelding: Vijver met rododendrons in het park van Kasteel Warmelo",
+							"height": true
 						},
 						{
 							"key": "img:tuinen-achterkant",
 							"type": "image",
-							"label": "Afbeelding: Formeel tuinpad naar Kasteel Warmelo"
+							"label": "Afbeelding: Formeel tuinpad naar Kasteel Warmelo",
+							"height": true
 						}
 					]
 				},
@@ -951,17 +964,20 @@
 						{
 							"key": "img:tuinen-evolutie",
 							"type": "image",
-							"label": "Afbeelding: Kasteeltuin"
+							"label": "Afbeelding: Kasteeltuin",
+							"height": true
 						},
 						{
 							"key": "img:tuinen-kasteel",
 							"type": "image",
-							"label": "Afbeelding: Kasteel Warmelo"
+							"label": "Afbeelding: Kasteel Warmelo",
+							"height": true
 						},
 						{
 							"key": "img:tuinen-tuinen2",
 							"type": "image",
-							"label": "Afbeelding: Historische tuinen"
+							"label": "Afbeelding: Historische tuinen",
+							"height": true
 						}
 					]
 				},
@@ -1091,7 +1107,8 @@
 						{
 							"key": "img:evenementen-hero",
 							"type": "image",
-							"label": "Afbeelding: Evenement op het landgoed"
+							"label": "Afbeelding: Evenement op het landgoed",
+							"height": true
 						}
 					]
 				},
@@ -1112,32 +1129,38 @@
 						{
 							"key": "img:evenementen-ballon",
 							"type": "image",
-							"label": "Afbeelding: Ballonvaart evenement Kasteel Warmelo"
+							"label": "Afbeelding: Ballonvaart evenement Kasteel Warmelo",
+							"height": true
 						},
 						{
 							"key": "img:evenementen-winter",
 							"type": "image",
-							"label": "Afbeelding: Winter Heerlijckheid Kasteel Warmelo"
+							"label": "Afbeelding: Winter Heerlijckheid Kasteel Warmelo",
+							"height": true
 						},
 						{
 							"key": "img:evenementen-licht",
 							"type": "image",
-							"label": "Afbeelding: Zandsculpturen in het Licht — Kasteel Warmelo"
+							"label": "Afbeelding: Zandsculpturen in het Licht — Kasteel Warmelo",
+							"height": true
 						},
 						{
 							"key": "img:evenementen-men",
 							"type": "image",
-							"label": "Afbeelding: Internationale menwedstrijd"
+							"label": "Afbeelding: Internationale menwedstrijd",
+							"height": true
 						},
 						{
 							"key": "img:evenementen-nk",
 							"type": "image",
-							"label": "Afbeelding: Kampioenschap paarden"
+							"label": "Afbeelding: Kampioenschap paarden",
+							"height": true
 						},
 						{
 							"key": "img:evenementen-rijtuighal",
 							"type": "image",
-							"label": "Afbeelding: Rijtuighal"
+							"label": "Afbeelding: Rijtuighal",
+							"height": true
 						}
 					]
 				},
@@ -1371,12 +1394,14 @@
 						{
 							"key": "img:horeca-lunch",
 							"type": "image",
-							"label": "Afbeelding: Lunch"
+							"label": "Afbeelding: Lunch",
+							"height": true
 						},
 						{
 							"key": "img:horeca-sfeer",
 							"type": "image",
-							"label": "Afbeelding: Horeca sfeer"
+							"label": "Afbeelding: Horeca sfeer",
+							"height": true
 						}
 					]
 				},
@@ -1387,7 +1412,8 @@
 						{
 							"key": "img:horeca-terras",
 							"type": "image",
-							"label": "Afbeelding: Tuinpaviljoen Kasteel Warmelo"
+							"label": "Afbeelding: Tuinpaviljoen Kasteel Warmelo",
+							"height": true
 						},
 						{
 							"key": "horeca.terras.label",
@@ -1947,22 +1973,26 @@
 						{
 							"key": "img:verhuur-img1",
 							"type": "image",
-							"label": "Afbeelding: Woonkamer"
+							"label": "Afbeelding: Woonkamer",
+							"height": true
 						},
 						{
 							"key": "img:verhuur-img2",
 							"type": "image",
-							"label": "Afbeelding: Slaapkamer"
+							"label": "Afbeelding: Slaapkamer",
+							"height": true
 						},
 						{
 							"key": "img:verhuur-keuken",
 							"type": "image",
-							"label": "Afbeelding: Keuken"
+							"label": "Afbeelding: Keuken",
+							"height": true
 						},
 						{
 							"key": "img:verhuur-img3",
 							"type": "image",
-							"label": "Afbeelding: Badkamer"
+							"label": "Afbeelding: Badkamer",
+							"height": true
 						}
 					]
 				},
@@ -1998,32 +2028,38 @@
 						{
 							"key": "img:verhuur-img1-2",
 							"type": "image",
-							"label": "Afbeelding: Woonkamer"
+							"label": "Afbeelding: Woonkamer",
+							"height": true
 						},
 						{
 							"key": "img:verhuur-img3-2",
 							"type": "image",
-							"label": "Afbeelding: Badkamer"
+							"label": "Afbeelding: Badkamer",
+							"height": true
 						},
 						{
 							"key": "img:verhuur-img5",
 							"type": "image",
-							"label": "Afbeelding: Slaapkamer"
+							"label": "Afbeelding: Slaapkamer",
+							"height": true
 						},
 						{
 							"key": "img:verhuur-keuken-2",
 							"type": "image",
-							"label": "Afbeelding: Keuken"
+							"label": "Afbeelding: Keuken",
+							"height": true
 						},
 						{
 							"key": "img:verhuur-img6",
 							"type": "image",
-							"label": "Afbeelding: Interieur"
+							"label": "Afbeelding: Interieur",
+							"height": true
 						},
 						{
 							"key": "img:verhuur-zij",
 							"type": "image",
-							"label": "Afbeelding: Buitenkant"
+							"label": "Afbeelding: Buitenkant",
+							"height": true
 						},
 						{
 							"key": "stay.homes.orangerie.book.label",
@@ -2053,32 +2089,38 @@
 						{
 							"key": "img:rentmeester-img1",
 							"type": "image",
-							"label": "Afbeelding: Woonkamer"
+							"label": "Afbeelding: Woonkamer",
+							"height": true
 						},
 						{
 							"key": "img:rentmeester-img2",
 							"type": "image",
-							"label": "Afbeelding: Slaapkamer"
+							"label": "Afbeelding: Slaapkamer",
+							"height": true
 						},
 						{
 							"key": "img:rentmeester-img3",
 							"type": "image",
-							"label": "Afbeelding: Tuin"
+							"label": "Afbeelding: Tuin",
+							"height": true
 						},
 						{
 							"key": "img:rentmeester-img4",
 							"type": "image",
-							"label": "Afbeelding: Slaapkamer 2"
+							"label": "Afbeelding: Slaapkamer 2",
+							"height": true
 						},
 						{
 							"key": "img:rentmeester-img5",
 							"type": "image",
-							"label": "Afbeelding: Terras"
+							"label": "Afbeelding: Terras",
+							"height": true
 						},
 						{
 							"key": "img:rentmeester-img6",
 							"type": "image",
-							"label": "Afbeelding: Entree"
+							"label": "Afbeelding: Entree",
+							"height": true
 						},
 						{
 							"key": "stay.homes.rentmeester.book.label",

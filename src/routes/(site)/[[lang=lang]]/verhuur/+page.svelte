@@ -751,7 +751,7 @@
 <section class="parallax-section">
 	<div
 		class="parallax-section__bg"
-		style:background-image={c.bg('verhuur-bg-img-9209-conv')}
+		style={c.bgStyle('verhuur-bg-img-9209-conv')}
 		data-edit={c.edit('img:verhuur-bg-img-9209-conv')}
 	></div>
 	<div class="parallax-section__overlay"></div>

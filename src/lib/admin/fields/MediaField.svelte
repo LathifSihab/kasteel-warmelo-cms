@@ -115,21 +115,24 @@
 					onchange={(e) => setFit({ scale: +e.currentTarget.value })}
 				/>
 			</label>
-			<label>
-				<span class="sub">Hoogte</span>
-				<select
-					value={fit.height ?? ''}
-					onchange={(e) => setFit({ height: e.currentTarget.value || undefined })}
-				>
-					<option value="">Automatisch</option>
-					{#each heights as h (h)}<option value={h}
-							>{h.startsWith('clamp') ? 'Origineel (meeschalend)' : h}</option
-						>{/each}
-				</select>
-			</label>
+			{#if field.height}
+				<label>
+					<span class="sub">Hoogte</span>
+					<select
+						value={fit.height ?? ''}
+						onchange={(e) => setFit({ height: e.currentTarget.value || undefined })}
+					>
+						<option value="">Automatisch</option>
+						{#each heights as h (h)}<option value={h}
+								>{h.startsWith('clamp') ? 'Origineel (meeschalend)' : h}</option
+							>{/each}
+					</select>
+				</label>
+			{/if}
 		</div>
 		<p class="hint">
-			Klik op de foto om het belangrijkste punt te kiezen. Hoogte geldt voor fotogalerijen.
+			Klik op de foto om het belangrijkste punt te kiezen.{#if field.height}
+				Op telefoons kan de pagina een eigen vaste hoogte gebruiken.{/if}
 		</p>
 		{#if ed.isCustom(fitKey, '*')}
 			<button type="button" class="link" onclick={() => ed.set(fitKey, '*', null, { reload: true })}
