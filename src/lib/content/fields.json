@@ -1,0 +1,3268 @@
+{
+	"pages": [
+		{
+			"id": "index",
+			"name": "Home",
+			"route": "",
+			"sections": [
+				{
+					"id": "index-1",
+					"title": "Kasteel Warmelo",
+					"fields": [
+						{
+							"key": "video:index-hero-video",
+							"type": "video",
+							"label": "Video"
+						},
+						{
+							"key": "img:index-hero",
+							"type": "image",
+							"label": "Afbeelding: Kasteel Warmelo luchtfoto"
+						},
+						{
+							"key": "home.hero.eyebrow",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.hero.title",
+							"type": "rich",
+							"label": "Hoofdtitel"
+						},
+						{
+							"key": "home.hero.sub",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:home-hero-sand",
+							"type": "button",
+							"label": "Zandsculpturen 2026",
+							"labelKey": "home.hero.btn.sand",
+							"default": "./zandsculpturen.html",
+							"seasonal": true
+						},
+						{
+							"key": "btn:home-hero-visit",
+							"type": "button",
+							"label": "Bezoek plannen",
+							"labelKey": "home.hero.btn.visit",
+							"default": "./openingstijden.html",
+							"seasonal": true
+						},
+						{
+							"key": "cms:stat-history",
+							"type": "value",
+							"label": "Getal"
+						},
+						{
+							"key": "home.hero.stat.history",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:stat-garden",
+							"type": "value",
+							"label": "Getal"
+						},
+						{
+							"key": "home.hero.stat.garden",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:stat-sand-count",
+							"type": "value",
+							"label": "Getal"
+						},
+						{
+							"key": "home.hero.stat.sand",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.scroll",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "index-2",
+					"title": "Zandsculpturen in het park",
+					"fields": [
+						{
+							"key": "home.sand.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.sand.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "home.sand.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:home-sand-more",
+							"type": "button",
+							"label": "Meer over zandsculpturen",
+							"labelKey": "btn.sand.more",
+							"default": "./zandsculpturen.html",
+							"seasonal": true
+						},
+						{
+							"key": "btn:home-sand-hours",
+							"type": "button",
+							"label": "Openingstijden & prijzen",
+							"labelKey": "btn.hours",
+							"default": "./openingstijden.html",
+							"seasonal": true
+						},
+						{
+							"key": "cms:stat-sculpturen",
+							"type": "value",
+							"label": "Getal"
+						},
+						{
+							"key": "home.sand.stat.sculpturen",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:stat-artists",
+							"type": "value",
+							"label": "Getal"
+						},
+						{
+							"key": "home.sand.stat.artists",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:stat-zand",
+							"type": "value",
+							"label": "Getal"
+						},
+						{
+							"key": "home.sand.stat.sand",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:stat-landen",
+							"type": "value",
+							"label": "Getal"
+						},
+						{
+							"key": "home.sand.stat.countries",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "img:index-dino",
+							"type": "image",
+							"label": "Afbeelding: Dino zandsculptuur"
+						}
+					]
+				},
+				{
+					"id": "index-3",
+					"title": "Vier eeuwen tuinarchitectuur",
+					"fields": [
+						{
+							"key": "img:index-luchtfoto2",
+							"type": "image",
+							"label": "Afbeelding: Kasteel Warmelo met formele tuin en rozenperken"
+						},
+						{
+							"key": "home.about.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.about.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "home.about.quote",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.about.body1",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "home.about.body2",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:home-about",
+							"type": "button",
+							"label": "Ontdek de tuinen",
+							"labelKey": "home.about.btn",
+							"default": "./tuinen.html",
+							"seasonal": true
+						}
+					]
+				},
+				{
+					"id": "index-4",
+					"title": "De Tuinen & het Park",
+					"fields": [
+						{
+							"key": "img:index-luchtfoto",
+							"type": "image",
+							"label": "Afbeelding: Tuinen"
+						},
+						{
+							"key": "home.grid.gardens.tag",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "home.grid.gardens.title",
+							"type": "rich",
+							"label": "Subtitel"
+						},
+						{
+							"key": "home.grid.gardens.arrow",
+							"type": "rich",
+							"label": "Linktekst"
+						},
+						{
+							"key": "img:index-menwedstrijd",
+							"type": "image",
+							"label": "Afbeelding: Evenementen"
+						},
+						{
+							"key": "home.grid.events.tag",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "home.grid.events.title",
+							"type": "rich",
+							"label": "Subtitel"
+						},
+						{
+							"key": "home.grid.events.arrow",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "img:index-terras",
+							"type": "image",
+							"label": "Afbeelding: Horeca & Terras"
+						},
+						{
+							"key": "home.grid.horeca.tag",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "home.grid.horeca.title",
+							"type": "rich",
+							"label": "Subtitel"
+						},
+						{
+							"key": "home.grid.horeca.arrow",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "img:index-boven",
+							"type": "image",
+							"label": "Afbeelding: Vakantiewoning"
+						},
+						{
+							"key": "home.grid.stay.tag",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "home.grid.stay.title",
+							"type": "rich",
+							"label": "Subtitel"
+						},
+						{
+							"key": "home.grid.stay.arrow",
+							"type": "text",
+							"label": "Linktekst"
+						}
+					]
+				},
+				{
+					"id": "index-5",
+					"title": "Plan uw bezoek aan Warmelo",
+					"fields": [
+						{
+							"key": "home.season.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.season.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "home.season.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "home.season.notice",
+							"type": "rich",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:home-season",
+							"type": "button",
+							"label": "Openingstijden & prijzen",
+							"labelKey": "home.season.btn",
+							"default": "./openingstijden.html",
+							"seasonal": true
+						},
+						{
+							"key": "home.hours.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.hours.season",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.hours.tuzo",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.hours.ascension",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.hours.whitsun",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.hours.monday",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.hours.closed",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.prices.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.prices.adult",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.prices.child",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.prices.infant",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.prices.free",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.prices.park",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.loc.label",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "index-6",
+					"title": "Overnachten op het landgoed",
+					"fields": [
+						{
+							"key": "img:index-overnachten",
+							"type": "image",
+							"label": "Afbeelding: Kasteel Warmelo ingang met brug"
+						},
+						{
+							"key": "home.vw.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.vw.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "home.vw.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:home-stay",
+							"type": "button",
+							"label": "Meer over verblijven",
+							"labelKey": "home.vw.btn",
+							"default": "./verhuur.html",
+							"seasonal": true
+						}
+					]
+				},
+				{
+					"id": "index-7",
+					"title": "Avontuur voor jong en oud",
+					"fields": [
+						{
+							"key": "home.kids.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "home.kids.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "home.kids.body1",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "home.kids.body2",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:home-kids",
+							"type": "button",
+							"label": "Zandsculpturen & speurtocht",
+							"labelKey": "home.kids.btn",
+							"default": "./zandsculpturen.html",
+							"seasonal": true
+						},
+						{
+							"key": "img:index-kinderen",
+							"type": "image",
+							"label": "Afbeelding: Kinderen bij de zandsculpturen"
+						}
+					]
+				},
+				{
+					"id": "index-seo",
+					"title": "Zoekmachines (titel en omschrijving)",
+					"fields": [
+						{
+							"key": "seo.index.title",
+							"type": "text",
+							"label": "Paginatitel"
+						},
+						{
+							"key": "seo.index.description",
+							"type": "text",
+							"label": "Omschrijving"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "zandsculpturen",
+			"name": "Zandsculpturen",
+			"route": "zandsculpturen",
+			"sections": [
+				{
+					"id": "zandsculpturen-1",
+					"title": "Zandsculpturen in het park",
+					"fields": [
+						{
+							"key": "img:zandsculpturen-hero",
+							"type": "image",
+							"label": "Afbeelding: Zandsculpturen 2026 in het park van Kasteel Warmelo"
+						},
+						{
+							"key": "sand.hero.eyebrow",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.hero.title",
+							"type": "rich",
+							"label": "Hoofdtitel"
+						},
+						{
+							"key": "home.scroll",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "zandsculpturen-2",
+					"title": "Meesterwerken uit zand",
+					"fields": [
+						{
+							"key": "sand.intro.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.intro.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "sand.intro.body1",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "sand.intro.body2",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "sand.intro.body3",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:sand-intro",
+							"type": "button",
+							"label": "Bezoek plannen",
+							"labelKey": "sand.intro.btn",
+							"default": "./openingstijden.html",
+							"seasonal": true
+						},
+						{
+							"key": "img:zand-was",
+							"type": "image",
+							"label": "Afbeelding: Zandsculptuur"
+						},
+						{
+							"key": "img:zand-img9647",
+							"type": "image",
+							"label": "Afbeelding: Zandsculptuur"
+						},
+						{
+							"key": "img:zand-koe",
+							"type": "image",
+							"label": "Afbeelding: Zandsculptuur"
+						}
+					]
+				},
+				{
+					"id": "zandsculpturen-3",
+					"title": "Sculpturen",
+					"fields": [
+						{
+							"key": "sand.facts.sculptures",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.facts.artists",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.facts.countries",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.facts.sand",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "zandsculpturen-4",
+					"title": "Galerij van voorgaande jaren",
+					"fields": [
+						{
+							"key": "sand.gallery.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.gallery.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "sand.gallery.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "img:zand-img8341",
+							"type": "image",
+							"label": "Afbeelding: Zandsculptuur"
+						},
+						{
+							"key": "img:zand-harrypotter",
+							"type": "image",
+							"label": "Afbeelding: Harry Potter"
+						},
+						{
+							"key": "img:zand-schutterij",
+							"type": "image",
+							"label": "Afbeelding: Schutterij"
+						},
+						{
+							"key": "img:zand-dino",
+							"type": "image",
+							"label": "Afbeelding: Dino sculptuur"
+						},
+						{
+							"key": "img:zand-koe-2",
+							"type": "image",
+							"label": "Afbeelding: Koe sculptuur"
+						},
+						{
+							"key": "img:zand-rattenvanger",
+							"type": "image",
+							"label": "Afbeelding: Rattenvanger"
+						},
+						{
+							"key": "img:zand-was-2",
+							"type": "image",
+							"label": "Afbeelding: Was sculptuur"
+						},
+						{
+							"key": "img:zand-img9647-2",
+							"type": "image",
+							"label": "Afbeelding: Sculptuur"
+						}
+					]
+				},
+				{
+					"id": "zandsculpturen-5",
+					"title": "Voor de kinderen",
+					"fields": [
+						{
+							"key": "img:zand-kinderen",
+							"type": "image",
+							"label": "Afbeelding: Kinderen bij zandsculpturen"
+						},
+						{
+							"key": "sand.kids.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.kids.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "sand.kids.body1",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "sand.kids.body2",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "sand.kids.price.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.kids.price.child",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.kids.price.under6",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.kids.price.free",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "zandsculpturen-6",
+					"title": "Kom het zelf beleven",
+					"fields": [
+						{
+							"key": "img:zandsculpturen-bg-new-lake-rhodo-panoramic",
+							"type": "image",
+							"label": "Achtergrondafbeelding"
+						},
+						{
+							"key": "sand.cta.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "sand.cta.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "sand.cta.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:sand-cta-hours",
+							"type": "button",
+							"label": "Openingstijden & prijzen",
+							"labelKey": "sand.cta.btn1",
+							"default": "./openingstijden.html",
+							"seasonal": true
+						},
+						{
+							"key": "btn:sand-cta-contact",
+							"type": "button",
+							"label": "Contact opnemen",
+							"labelKey": "sand.cta.btn2",
+							"default": "./contact.html",
+							"seasonal": true
+						}
+					]
+				},
+				{
+					"id": "zandsculpturen-seo",
+					"title": "Zoekmachines (titel en omschrijving)",
+					"fields": [
+						{
+							"key": "seo.zandsculpturen.title",
+							"type": "text",
+							"label": "Paginatitel"
+						},
+						{
+							"key": "seo.zandsculpturen.description",
+							"type": "text",
+							"label": "Omschrijving"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "tuinen",
+			"name": "Tuinen",
+			"route": "tuinen",
+			"sections": [
+				{
+					"id": "tuinen-1",
+					"title": "Vier eeuwen tuinarchitectuur",
+					"fields": [
+						{
+							"key": "img:tuinen-hero",
+							"type": "image",
+							"label": "Afbeelding: Kasteel Warmelo met historische tuinen en gracht"
+						},
+						{
+							"key": "gardens.hero.eyebrow",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.hero.title",
+							"type": "rich",
+							"label": "Hoofdtitel"
+						},
+						{
+							"key": "home.scroll",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "tuinen-2",
+					"title": "Een levend erfgoed",
+					"fields": [
+						{
+							"key": "gardens.intro.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.intro.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "gardens.intro.body1",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "gardens.intro.body2",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "gardens.intro.body3",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "gardens.intro.stat1",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.intro.stat2",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "img:tuinen-zomer",
+							"type": "image",
+							"label": "Afbeelding: Vijver met rododendrons in het park van Kasteel Warmelo"
+						},
+						{
+							"key": "img:tuinen-achterkant",
+							"type": "image",
+							"label": "Afbeelding: Formeel tuinpad naar Kasteel Warmelo"
+						}
+					]
+				},
+				{
+					"id": "tuinen-3",
+					"title": "De evolutie van de tuin",
+					"fields": [
+						{
+							"key": "gardens.timeline.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.timeline.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "gardens.tl1.era",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.tl1.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.tl1.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "gardens.tl2.era",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.tl2.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.tl2.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "gardens.tl3.era",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.tl3.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.tl3.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "gardens.tl4.era",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.tl4.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.tl4.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "gardens.tl5.era",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.tl5.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.tl5.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "img:tuinen-evolutie",
+							"type": "image",
+							"label": "Afbeelding: Kasteeltuin"
+						},
+						{
+							"key": "img:tuinen-kasteel",
+							"type": "image",
+							"label": "Afbeelding: Kasteel Warmelo"
+						},
+						{
+							"key": "img:tuinen-tuinen2",
+							"type": "image",
+							"label": "Afbeelding: Historische tuinen"
+						}
+					]
+				},
+				{
+					"id": "tuinen-4",
+					"title": "Ontdek de historische tuinen",
+					"fields": [
+						{
+							"key": "img:tuinen-bg-new-english-garden-panoramic",
+							"type": "image",
+							"label": "Achtergrondafbeelding"
+						},
+						{
+							"key": "gardens.cta.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "gardens.cta.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "gardens.cta.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:gardens-cta-visit",
+							"type": "button",
+							"label": "Plan uw bezoek",
+							"labelKey": "gardens.cta.btn1",
+							"default": "./openingstijden.html",
+							"seasonal": true
+						},
+						{
+							"key": "btn:gardens-cta-sand",
+							"type": "button",
+							"label": "Zandsculpturen",
+							"labelKey": "gardens.cta.btn2",
+							"default": "./zandsculpturen.html",
+							"seasonal": true
+						}
+					]
+				},
+				{
+					"id": "tuinen-seo",
+					"title": "Zoekmachines (titel en omschrijving)",
+					"fields": [
+						{
+							"key": "seo.tuinen.title",
+							"type": "text",
+							"label": "Paginatitel"
+						},
+						{
+							"key": "seo.tuinen.description",
+							"type": "text",
+							"label": "Omschrijving"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "evenementen",
+			"name": "Evenementen",
+			"route": "evenementen",
+			"sections": [
+				{
+					"id": "evenementen-1",
+					"title": "Evenementen & Agenda",
+					"fields": [
+						{
+							"key": "video:evenementen-hero-video",
+							"type": "video",
+							"label": "Video"
+						},
+						{
+							"key": "events.hero.eyebrow",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.hero.title",
+							"type": "rich",
+							"label": "Hoofdtitel"
+						},
+						{
+							"key": "home.scroll",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "evenementen-2",
+					"title": "Groot en klein evenement",
+					"fields": [
+						{
+							"key": "events.intro.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.intro.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "events.intro.body1",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "events.intro.body2",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:events-intro",
+							"type": "button",
+							"label": "Evenement aanvragen",
+							"labelKey": "events.intro.btn",
+							"default": "./contact.html",
+							"seasonal": true
+						},
+						{
+							"key": "img:evenementen-hero",
+							"type": "image",
+							"label": "Afbeelding: Evenement op het landgoed"
+						}
+					]
+				},
+				{
+					"id": "evenementen-3",
+					"title": "Evenementen door de jaren heen",
+					"fields": [
+						{
+							"key": "events.gallery.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.gallery.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "img:evenementen-ballon",
+							"type": "image",
+							"label": "Afbeelding: Ballonvaart evenement Kasteel Warmelo"
+						},
+						{
+							"key": "img:evenementen-winter",
+							"type": "image",
+							"label": "Afbeelding: Winter Heerlijckheid Kasteel Warmelo"
+						},
+						{
+							"key": "img:evenementen-licht",
+							"type": "image",
+							"label": "Afbeelding: Zandsculpturen in het Licht — Kasteel Warmelo"
+						},
+						{
+							"key": "img:evenementen-men",
+							"type": "image",
+							"label": "Afbeelding: Internationale menwedstrijd"
+						},
+						{
+							"key": "img:evenementen-nk",
+							"type": "image",
+							"label": "Afbeelding: Kampioenschap paarden"
+						},
+						{
+							"key": "img:evenementen-rijtuighal",
+							"type": "image",
+							"label": "Afbeelding: Rijtuighal"
+						}
+					]
+				},
+				{
+					"id": "evenementen-4",
+					"title": "Agenda 2026",
+					"fields": [
+						{
+							"key": "events.agenda.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.agenda.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "events.agenda.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "event:1:hidden",
+							"type": "toggle",
+							"label": "Evenement 1 verbergen"
+						},
+						{
+							"key": "cms:event-e1-day",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "events.e1.month",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e1.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e1.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e1.desc",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "event:2:hidden",
+							"type": "toggle",
+							"label": "Evenement 2 verbergen"
+						},
+						{
+							"key": "cms:event-e2-day",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "events.e2.month",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e2.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e2.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e2.desc",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "event:3:hidden",
+							"type": "toggle",
+							"label": "Evenement 3 verbergen"
+						},
+						{
+							"key": "cms:event-e3-day",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "events.e3.month",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e3.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e3.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e3.desc",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "event:4:hidden",
+							"type": "toggle",
+							"label": "Evenement 4 verbergen"
+						},
+						{
+							"key": "cms:event-e4-day",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "events.e4.month",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e4.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e4.title",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.e4.desc",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "events.social.body",
+							"type": "text",
+							"label": "Tekst"
+						}
+					]
+				},
+				{
+					"id": "evenementen-seo",
+					"title": "Zoekmachines (titel en omschrijving)",
+					"fields": [
+						{
+							"key": "seo.evenementen.title",
+							"type": "text",
+							"label": "Paginatitel"
+						},
+						{
+							"key": "seo.evenementen.description",
+							"type": "text",
+							"label": "Omschrijving"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "horeca",
+			"name": "Horeca",
+			"route": "horeca",
+			"sections": [
+				{
+					"id": "horeca-1",
+					"title": "Horeca & Terras",
+					"fields": [
+						{
+							"key": "img:horeca-hero",
+							"type": "image",
+							"label": "Afbeelding: Terras Kasteel Warmelo"
+						},
+						{
+							"key": "horeca.hero.eyebrow",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "horeca.hero.title",
+							"type": "rich",
+							"label": "Hoofdtitel"
+						},
+						{
+							"key": "home.scroll",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "horeca-2",
+					"title": "Genieten in historische sfeer",
+					"fields": [
+						{
+							"key": "horeca.intro.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "horeca.intro.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "horeca.intro.body1",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "horeca.intro.body3",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:horeca-intro",
+							"type": "button",
+							"label": "Openingstijden bekijken",
+							"labelKey": "horeca.intro.btn",
+							"default": "./openingstijden.html",
+							"seasonal": true
+						},
+						{
+							"key": "img:horeca-lunch",
+							"type": "image",
+							"label": "Afbeelding: Lunch"
+						},
+						{
+							"key": "img:horeca-sfeer",
+							"type": "image",
+							"label": "Afbeelding: Horeca sfeer"
+						}
+					]
+				},
+				{
+					"id": "horeca-3",
+					"title": "Het terras in de tuin",
+					"fields": [
+						{
+							"key": "img:horeca-terras",
+							"type": "image",
+							"label": "Afbeelding: Tuinpaviljoen Kasteel Warmelo"
+						},
+						{
+							"key": "horeca.terras.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "horeca.terras.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "horeca.terras.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "horeca.terras.li1",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "horeca.terras.li2",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "horeca.terras.li3",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "horeca.terras.li4",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "horeca.terras.li5",
+							"type": "text",
+							"label": "Opsommingspunt"
+						}
+					]
+				},
+				{
+					"id": "horeca-4",
+					"title": "Onze menukaart",
+					"fields": [
+						{
+							"key": "horeca.menu.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "horeca.menu.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "cms:menu-head-1",
+							"type": "value",
+							"label": "Kop"
+						},
+						{
+							"key": "cms:menu-koffie",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:koffie",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-espresso",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:espresso",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-cappuccino",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:cappuccino",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-thee",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:thee",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-muntthee",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:muntthee",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-kannetje",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:kannetje",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-head-2",
+							"type": "value",
+							"label": "Kop"
+						},
+						{
+							"key": "cms:menu-frisdrank",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:frisdrank",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-vitaminewater",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:vitaminewater",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-head-3",
+							"type": "value",
+							"label": "Kop"
+						},
+						{
+							"key": "cms:menu-wittewijn",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "cms:menu-wittewijn-desc",
+							"type": "value",
+							"label": "Omschrijving"
+						},
+						{
+							"key": "menuprice:wittewijn",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-rose",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "cms:menu-rose-desc",
+							"type": "value",
+							"label": "Omschrijving"
+						},
+						{
+							"key": "menuprice:rose",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-rodewijn",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "cms:menu-rodewijn-desc",
+							"type": "value",
+							"label": "Omschrijving"
+						},
+						{
+							"key": "menuprice:rodewijn",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-bier",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:bier",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-witbier",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:witbier",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-radler",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:radler",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-bier00",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:bier00",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-head-4",
+							"type": "value",
+							"label": "Kop"
+						},
+						{
+							"key": "cms:menu-gezond",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:gezond",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-brie",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:brie",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-eiersalade",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:eiersalade",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-kipkerrie",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:kipkerrie",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-ham",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:ham",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-kaas",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:kaas",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-head-5",
+							"type": "value",
+							"label": "Kop"
+						},
+						{
+							"key": "cms:menu-appelflap",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:appelflap",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-saucijzen",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:saucijzen",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-kroket",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:kroket",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-tosti",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:tosti",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-bitterballen",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:bitterballen",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-head-6",
+							"type": "value",
+							"label": "Kop"
+						},
+						{
+							"key": "cms:menu-appelgebak",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:appelgebak",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-luxegebak",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "cms:menu-luxegebak-desc",
+							"type": "value",
+							"label": "Omschrijving"
+						},
+						{
+							"key": "menuprice:luxegebak",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-petitfour",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:petitfour",
+							"type": "price",
+							"label": "Prijs"
+						},
+						{
+							"key": "cms:menu-stroopwafel",
+							"type": "value",
+							"label": "Gerecht"
+						},
+						{
+							"key": "menuprice:stroopwafel",
+							"type": "price",
+							"label": "Prijs"
+						}
+					]
+				},
+				{
+					"id": "horeca-5",
+					"title": "Di t/m zo van 10.30 – 16.30 uur",
+					"fields": [
+						{
+							"key": "horeca.cta.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "horeca.cta.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "horeca.cta.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "btn:horeca-cta",
+							"type": "button",
+							"label": "Openingstijden & toegang",
+							"labelKey": "horeca.cta.btn",
+							"default": "./openingstijden.html",
+							"seasonal": true
+						}
+					]
+				},
+				{
+					"id": "horeca-seo",
+					"title": "Zoekmachines (titel en omschrijving)",
+					"fields": [
+						{
+							"key": "seo.horeca.title",
+							"type": "text",
+							"label": "Paginatitel"
+						},
+						{
+							"key": "seo.horeca.description",
+							"type": "text",
+							"label": "Omschrijving"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "verhuur",
+			"name": "Verhuur",
+			"route": "verhuur",
+			"sections": [
+				{
+					"id": "verhuur-1",
+					"title": "Vakantiewoningen op het landgoed",
+					"fields": [
+						{
+							"key": "img:verhuur-hero",
+							"type": "image",
+							"label": "Afbeelding: De Orangerie — slaapkamer met balkenplafond en open haard"
+						},
+						{
+							"key": "stay.hero.eyebrow",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.hero.title",
+							"type": "rich",
+							"label": "Hoofdtitel"
+						},
+						{
+							"key": "home.scroll",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "verhuur-2",
+					"title": "Een unieke ervaring",
+					"fields": [
+						{
+							"key": "stay.intro.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.intro.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "stay.intro.body1",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "stay.intro.body2",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "stay.intro.body3",
+							"type": "rich",
+							"label": "Tekst"
+						},
+						{
+							"key": "stay.amenity.garden",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.amenity.access",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.amenity.bikes",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.amenity.ground",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.amenity.bath",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.amenity.parking",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.amenity.nopets",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.amenity.host",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "img:verhuur-img1",
+							"type": "image",
+							"label": "Afbeelding: Woonkamer"
+						},
+						{
+							"key": "img:verhuur-img2",
+							"type": "image",
+							"label": "Afbeelding: Slaapkamer"
+						},
+						{
+							"key": "img:verhuur-keuken",
+							"type": "image",
+							"label": "Afbeelding: Keuken"
+						},
+						{
+							"key": "img:verhuur-img3",
+							"type": "image",
+							"label": "Afbeelding: Badkamer"
+						}
+					]
+				},
+				{
+					"id": "verhuur-3",
+					"title": "Twee unieke verblijven",
+					"fields": [
+						{
+							"key": "stay.homes.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.homes.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "stay.homes.orangerie.type",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.homes.orangerie.name",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "stay.homes.orangerie.desc",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "img:verhuur-img1-2",
+							"type": "image",
+							"label": "Afbeelding: Woonkamer"
+						},
+						{
+							"key": "img:verhuur-img3-2",
+							"type": "image",
+							"label": "Afbeelding: Badkamer"
+						},
+						{
+							"key": "img:verhuur-img5",
+							"type": "image",
+							"label": "Afbeelding: Slaapkamer"
+						},
+						{
+							"key": "img:verhuur-keuken-2",
+							"type": "image",
+							"label": "Afbeelding: Keuken"
+						},
+						{
+							"key": "img:verhuur-img6",
+							"type": "image",
+							"label": "Afbeelding: Interieur"
+						},
+						{
+							"key": "img:verhuur-zij",
+							"type": "image",
+							"label": "Afbeelding: Buitenkant"
+						},
+						{
+							"key": "stay.homes.orangerie.book.label",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "stay.homes.orangerie.book.name",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "stay.homes.rentmeester.type",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.homes.rentmeester.name",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "stay.homes.rentmeester.desc",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "img:rentmeester-img1",
+							"type": "image",
+							"label": "Afbeelding: Woonkamer"
+						},
+						{
+							"key": "img:rentmeester-img2",
+							"type": "image",
+							"label": "Afbeelding: Slaapkamer"
+						},
+						{
+							"key": "img:rentmeester-img3",
+							"type": "image",
+							"label": "Afbeelding: Tuin"
+						},
+						{
+							"key": "img:rentmeester-img4",
+							"type": "image",
+							"label": "Afbeelding: Slaapkamer 2"
+						},
+						{
+							"key": "img:rentmeester-img5",
+							"type": "image",
+							"label": "Afbeelding: Terras"
+						},
+						{
+							"key": "img:rentmeester-img6",
+							"type": "image",
+							"label": "Afbeelding: Entree"
+						},
+						{
+							"key": "stay.homes.rentmeester.book.label",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "stay.homes.rentmeester.book.name",
+							"type": "text",
+							"label": "Linktekst"
+						}
+					]
+				},
+				{
+					"id": "verhuur-4",
+					"title": "Boek uw verblijf",
+					"fields": [
+						{
+							"key": "stay.options.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.options.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "stay.options.intro",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "stay.book.orangerie.type",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.book.orangerie.name",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "stay.book.orangerie.desc",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "stay.book.orangerie.f1",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "stay.book.orangerie.f2",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "stay.book.orangerie.f3",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "stay.book.orangerie.f4",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "stay.book.orangerie.book.label",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "stay.book.orangerie.book.name",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "stay.book.rentmeester.type",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.book.rentmeester.name",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "stay.book.rentmeester.desc",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "stay.book.rentmeester.f1",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "stay.book.rentmeester.f2",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "stay.book.rentmeester.f3",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "stay.book.rentmeester.f4",
+							"type": "text",
+							"label": "Opsommingspunt"
+						},
+						{
+							"key": "stay.book.rentmeester.book.label",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "stay.book.rentmeester.book.name",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "stay.checkin.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.checkin.body",
+							"type": "rich",
+							"label": "Tekst"
+						},
+						{
+							"key": "stay.checkout.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.checkout.body",
+							"type": "rich",
+							"label": "Tekst"
+						},
+						{
+							"key": "stay.pets.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.pets.body",
+							"type": "rich",
+							"label": "Tekst"
+						}
+					]
+				},
+				{
+					"id": "verhuur-5",
+					"title": "Wakker worden op het landgoed",
+					"fields": [
+						{
+							"key": "img:verhuur-bg-img-9209-conv",
+							"type": "image",
+							"label": "Achtergrondafbeelding"
+						},
+						{
+							"key": "stay.cta.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "stay.cta.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "stay.cta.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "stay.cta.orangerie.btn",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "stay.cta.rentmeester.btn",
+							"type": "text",
+							"label": "Linktekst"
+						}
+					]
+				},
+				{
+					"id": "verhuur-seo",
+					"title": "Zoekmachines (titel en omschrijving)",
+					"fields": [
+						{
+							"key": "seo.verhuur.title",
+							"type": "text",
+							"label": "Paginatitel"
+						},
+						{
+							"key": "seo.verhuur.description",
+							"type": "text",
+							"label": "Omschrijving"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "openingstijden",
+			"name": "Bezoek",
+			"route": "openingstijden",
+			"sections": [
+				{
+					"id": "openingstijden-1",
+					"title": "Openingstijden & Prijzen",
+					"fields": [
+						{
+							"key": "img:openingstijden-hero",
+							"type": "image",
+							"label": "Afbeelding: Kasteel Warmelo"
+						},
+						{
+							"key": "visit.hero.eyebrow",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.hero.title",
+							"type": "rich",
+							"label": "Hoofdtitel"
+						},
+						{
+							"key": "home.scroll",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "openingstijden-2",
+					"title": "Seizoen 2026 · 29 april – 4 oktober · …",
+					"fields": [
+						{
+							"key": "visit.banner",
+							"type": "rich",
+							"label": "Tekst"
+						}
+					]
+				},
+				{
+					"id": "openingstijden-3",
+					"title": "Openingstijden per dag",
+					"fields": [
+						{
+							"key": "visit.hours.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.hours.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "visit.hours.sub",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "day.mon",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "time.closed",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "day.tue",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:hours-tue",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "day.wed",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:hours-wed",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "day.thu",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:hours-thu",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "day.fri",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:hours-fri",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "day.sat",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:hours-sat",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "day.sun",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:hours-sun",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "day.ascension",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:hours-ascension",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "day.whitsun",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "cms:hours-whitsun",
+							"type": "value",
+							"label": "Label"
+						},
+						{
+							"key": "visit.notice",
+							"type": "rich",
+							"label": "Tekst"
+						}
+					]
+				},
+				{
+					"id": "openingstijden-4",
+					"title": "Toegangsprijzen",
+					"fields": [
+						{
+							"key": "visit.prices.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.prices.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "visit.prices.sub",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "visit.pc.adult.who",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.pc.adult.note",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.pc.child.who",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.pc.child.note",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.pc.infant.who",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.pc.infant.price",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.pc.infant.note",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.pc.park.who",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.pc.park.price",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.school.notice",
+							"type": "rich",
+							"label": "Tekst"
+						}
+					]
+				},
+				{
+					"id": "openingstijden-5",
+					"title": "Locatie & bereikbaarheid",
+					"fields": [
+						{
+							"key": "visit.loc.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.loc.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "visit.loc.entrance",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.loc.car.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.loc.car.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "visit.loc.bike.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.loc.bike.body",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "visit.loc.bus.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.loc.bus.body",
+							"type": "rich",
+							"label": "Tekst"
+						},
+						{
+							"key": "visit.loc.map.caption",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.loc.map.btn",
+							"type": "text",
+							"label": "Linktekst"
+						},
+						{
+							"key": "visit.loc.map.bus",
+							"type": "text",
+							"label": "Linktekst"
+						}
+					]
+				},
+				{
+					"id": "openingstijden-6",
+					"title": "Handig om te weten",
+					"fields": [
+						{
+							"key": "visit.tips.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.tips.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "visit.tip1.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.tip1.title",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "visit.tip1.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "visit.tip2.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.tip2.title",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "visit.tip2.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "visit.tip3.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.tip3.title",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "visit.tip3.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "visit.tip4.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.tip4.title",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "visit.tip4.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "visit.tip4.link",
+							"type": "rich",
+							"label": "Linktekst"
+						},
+						{
+							"key": "visit.tip5.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "visit.tip5.title",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "visit.tip5.text",
+							"type": "text",
+							"label": "Tekst"
+						}
+					]
+				},
+				{
+					"id": "openingstijden-seo",
+					"title": "Zoekmachines (titel en omschrijving)",
+					"fields": [
+						{
+							"key": "seo.openingstijden.title",
+							"type": "text",
+							"label": "Paginatitel"
+						},
+						{
+							"key": "seo.openingstijden.description",
+							"type": "text",
+							"label": "Omschrijving"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "contact",
+			"name": "Contact",
+			"route": "contact",
+			"sections": [
+				{
+					"id": "contact-1",
+					"title": "Neem contact op",
+					"fields": [
+						{
+							"key": "img:contact-hero",
+							"type": "image",
+							"label": "Afbeelding: Kasteel Warmelo met gracht en tuinen"
+						},
+						{
+							"key": "contact.hero.eyebrow",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.hero.title",
+							"type": "rich",
+							"label": "Hoofdtitel"
+						},
+						{
+							"key": "home.scroll",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "contact-2",
+					"title": "Zo vindt u ons",
+					"fields": [
+						{
+							"key": "contact.info.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.info.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "contact.block.address.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.block.address.estate",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.block.entrance.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.block.entrance.note",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.block.phone.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.block.email.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.block.social.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.block.hours.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.block.hours.value",
+							"type": "rich",
+							"label": "Label"
+						},
+						{
+							"key": "contact.form.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.form.title",
+							"type": "text",
+							"label": "Titel"
+						},
+						{
+							"key": "label.fname",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "ph.fname",
+							"type": "text",
+							"label": "Invulveld (voorbeeldtekst)"
+						},
+						{
+							"key": "label.lname",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "ph.lname",
+							"type": "text",
+							"label": "Invulveld (voorbeeldtekst)"
+						},
+						{
+							"key": "label.email",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "ph.email",
+							"type": "text",
+							"label": "Invulveld (voorbeeldtekst)"
+						},
+						{
+							"key": "label.phone",
+							"type": "rich",
+							"label": "Label"
+						},
+						{
+							"key": "ph.phone",
+							"type": "text",
+							"label": "Invulveld (voorbeeldtekst)"
+						},
+						{
+							"key": "label.subject",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.subject.placeholder",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.subject.general",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.subject.sand",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.subject.stay",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.subject.events",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.subject.school",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.subject.other",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "label.message",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "ph.message",
+							"type": "text",
+							"label": "Invulveld (voorbeeldtekst)"
+						},
+						{
+							"key": "contact.form.submit",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.form.privacy",
+							"type": "rich",
+							"label": "Tekst"
+						}
+					]
+				},
+				{
+					"id": "contact-3",
+					"title": "Borculoseweg · Diepenheim · Gratis par…",
+					"fields": [
+						{
+							"key": "contact.map.pin",
+							"type": "text",
+							"label": "Label"
+						}
+					]
+				},
+				{
+					"id": "contact-4",
+					"title": "Wat vindt u op Warmelo?",
+					"fields": [
+						{
+							"key": "contact.explore.label",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.explore.title",
+							"type": "rich",
+							"label": "Titel"
+						},
+						{
+							"key": "img:contact-zand",
+							"type": "image",
+							"label": "Afbeelding: Zandsculpturen"
+						},
+						{
+							"key": "contact.card1.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.card1.title",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "contact.card1.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "contact.card1.link",
+							"type": "rich",
+							"label": "Linktekst"
+						},
+						{
+							"key": "img:contact-park",
+							"type": "image",
+							"label": "Afbeelding: Tuinen"
+						},
+						{
+							"key": "contact.card2.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.card2.title",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "contact.card2.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "contact.card2.link",
+							"type": "rich",
+							"label": "Linktekst"
+						},
+						{
+							"key": "img:contact-boven",
+							"type": "image",
+							"label": "Afbeelding: Vakantiewoning"
+						},
+						{
+							"key": "contact.card3.tag",
+							"type": "text",
+							"label": "Label"
+						},
+						{
+							"key": "contact.card3.title",
+							"type": "text",
+							"label": "Subtitel"
+						},
+						{
+							"key": "contact.card3.text",
+							"type": "text",
+							"label": "Tekst"
+						},
+						{
+							"key": "contact.card3.link",
+							"type": "rich",
+							"label": "Linktekst"
+						}
+					]
+				},
+				{
+					"id": "contact-seo",
+					"title": "Zoekmachines (titel en omschrijving)",
+					"fields": [
+						{
+							"key": "seo.contact.title",
+							"type": "text",
+							"label": "Paginatitel"
+						},
+						{
+							"key": "seo.contact.description",
+							"type": "text",
+							"label": "Omschrijving"
+						}
+					]
+				}
+			]
+		}
+	],
+	"shared": [
+		{
+			"id": "menu",
+			"title": "Menu",
+			"fields": [
+				{
+					"key": "nav.home",
+					"type": "text",
+					"label": "Menu-item"
+				},
+				{
+					"key": "nav.sand",
+					"type": "text",
+					"label": "Menu-item"
+				},
+				{
+					"key": "nav.gardens",
+					"type": "text",
+					"label": "Menu-item"
+				},
+				{
+					"key": "nav.events",
+					"type": "text",
+					"label": "Menu-item"
+				},
+				{
+					"key": "nav.horeca",
+					"type": "text",
+					"label": "Menu-item"
+				},
+				{
+					"key": "nav.stay",
+					"type": "text",
+					"label": "Menu-item"
+				},
+				{
+					"key": "nav.visit",
+					"type": "text",
+					"label": "Menu-item"
+				},
+				{
+					"key": "nav.cta",
+					"type": "text",
+					"label": "Menu-item"
+				}
+			]
+		},
+		{
+			"id": "contact",
+			"title": "Contactgegevens",
+			"fields": [
+				{
+					"key": "contact:name",
+					"type": "value",
+					"label": "Naam"
+				},
+				{
+					"key": "contact:street",
+					"type": "value",
+					"label": "Straat en huisnummer"
+				},
+				{
+					"key": "contact:city",
+					"type": "value",
+					"label": "Postcode en plaats"
+				},
+				{
+					"key": "contact:phone",
+					"type": "value",
+					"label": "Telefoon"
+				},
+				{
+					"key": "contact:email",
+					"type": "value",
+					"label": "E-mail"
+				},
+				{
+					"key": "contact:entrance",
+					"type": "value",
+					"label": "Ingang & parkeren"
+				}
+			]
+		},
+		{
+			"id": "footer",
+			"title": "Footerteksten",
+			"fields": [
+				{
+					"key": "footer.desc",
+					"type": "text",
+					"label": "Tekst"
+				},
+				{
+					"key": "footer.open",
+					"type": "text",
+					"label": "Label"
+				},
+				{
+					"key": "footer.visit",
+					"type": "text",
+					"label": "Label"
+				},
+				{
+					"key": "footer.follow",
+					"type": "text",
+					"label": "Label"
+				},
+				{
+					"key": "footer.copy.full",
+					"type": "text",
+					"label": "Label"
+				},
+				{
+					"key": "footer.copy",
+					"type": "text",
+					"label": "Label"
+				}
+			]
+		},
+		{
+			"id": "footer-links",
+			"title": "Footerlinks",
+			"fields": [
+				{
+					"key": "btn:footer-sand",
+					"type": "button",
+					"label": "Zandsculpturen",
+					"labelKey": "footer.link.sand",
+					"default": "./zandsculpturen.html",
+					"seasonal": false
+				},
+				{
+					"key": "btn:footer-gardens",
+					"type": "button",
+					"label": "Historische Tuinen",
+					"labelKey": "footer.link.gardens",
+					"default": "./tuinen.html",
+					"seasonal": false
+				},
+				{
+					"key": "btn:footer-events",
+					"type": "button",
+					"label": "Evenementen",
+					"labelKey": "footer.link.events",
+					"default": "./evenementen.html",
+					"seasonal": false
+				},
+				{
+					"key": "btn:footer-hours",
+					"type": "button",
+					"label": "Openingstijden",
+					"labelKey": "footer.link.visit",
+					"default": "./openingstijden.html",
+					"seasonal": false
+				},
+				{
+					"key": "btn:footer-prices",
+					"type": "button",
+					"label": "Toegangsprijzen",
+					"labelKey": "footer.link.prices",
+					"default": "./openingstijden.html",
+					"seasonal": false
+				},
+				{
+					"key": "btn:footer-horeca",
+					"type": "button",
+					"label": "Horeca & Terras",
+					"labelKey": "footer.link.horeca",
+					"default": "./horeca.html",
+					"seasonal": false
+				},
+				{
+					"key": "btn:footer-stay",
+					"type": "button",
+					"label": "Vakantiewoningen",
+					"labelKey": "footer.link.stay",
+					"default": "./verhuur.html",
+					"seasonal": false
+				},
+				{
+					"key": "btn:footer-contact",
+					"type": "button",
+					"label": "Contact",
+					"labelKey": "footer.link.contact",
+					"default": "./contact.html",
+					"seasonal": false
+				}
+			]
+		},
+		{
+			"id": "links",
+			"title": "Links",
+			"fields": [
+				{
+					"key": "link:facebook",
+					"type": "link",
+					"label": "Facebook",
+					"default": "https://www.facebook.com/warmelodiepenheim/"
+				},
+				{
+					"key": "link:instagram",
+					"type": "link",
+					"label": "Instagram",
+					"default": "https://www.instagram.com/kasteelwarmelo/"
+				},
+				{
+					"key": "link:airbnb-orangerie",
+					"type": "link",
+					"label": "Airbnb — De Orangerie",
+					"default": "https://www.airbnb.be/rooms/909882796833601314"
+				},
+				{
+					"key": "link:airbnb-rentmeester",
+					"type": "link",
+					"label": "Airbnb — Rentmeesterwoning",
+					"default": "https://www.airbnb.be/rooms/1176574266092599936"
+				}
+			]
+		},
+		{
+			"id": "season",
+			"title": "Seizoen & prijzen",
+			"fields": [
+				{
+					"key": "cms:season-period",
+					"type": "value",
+					"label": "Seizoen: period"
+				},
+				{
+					"key": "cms:season-hours",
+					"type": "value",
+					"label": "Seizoen: hours"
+				},
+				{
+					"key": "cms:price-volwassene",
+					"type": "price",
+					"label": "Prijs volwassene"
+				},
+				{
+					"key": "cms:price-kind",
+					"type": "price",
+					"label": "Prijs kind"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,10 @@
+/* Additions for the SvelteKit site on top of warmelo.min.css */
+
+/* the language switch is now made of links (one URL per language) instead of buttons */
+a.lang-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	line-height: 1.2;
+}
