@@ -50,6 +50,7 @@
 		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
+		"@neon/env": "^1.6.6",
 		"@neondatabase/serverless": "^1.2.0",
 		"aws4fetch": "^1.0.20"
 	}
