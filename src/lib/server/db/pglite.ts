@@ -8,8 +8,11 @@ function wrap(pg: PGlite): Db {
 			return (await pg.query<T>(text, params)).rows;
 		},
 		async transaction(statements) {
-			await pg.transaction(async (tx) => {
-				for (const s of statements) await tx.query(s.text, s.params ?? []);
+			return pg.transaction(async (tx) => {
+				const results: Record<string, unknown>[][] = [];
+				for (const s of statements)
+					results.push((await tx.query<Record<string, unknown>>(s.text, s.params ?? [])).rows);
+				return results;
 			});
 		},
 		async close() {

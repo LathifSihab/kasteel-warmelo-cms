@@ -98,16 +98,20 @@ regions, and this one is close to the Netherlands). Then, signed in with the DRP
 neon link --org-id <org> --project-name warmelo --region-id aws-eu-central-1
 neon deploy               # creates the "media" bucket from neon.ts, pulls credentials into .env
 npm run db:migrate        # creates the tables
+npm run db:app-role       # creates the limited "warmelo_app" role, writes APP_DATABASE_URL to .env
 ```
 
-`DATABASE_URL` should be the **pooled** connection string. Use a Neon branch per feature
+`DATABASE_URL` should be the **pooled** connection string. It is the owner role, for migrations and
+local development only; the Worker connects as `warmelo_app` (`APP_DATABASE_URL`), which can read
+and write the app's tables but not change the schema or create roles. Re-running `db:app-role`
+gives it a new password, so set the Worker's `DATABASE_URL` secret again afterwards. Use a Neon branch per feature
 (`neon checkout <name> --create`) to test migrations and imports without touching production.
 
 ## Cloudflare
 
 ```sh
 npx wrangler login
-npx wrangler secret put DATABASE_URL
+npx wrangler secret put DATABASE_URL        # the APP_DATABASE_URL value from .env, not the owner one
 npx wrangler secret put ADMIN_PASSWORD
 npx wrangler secret put SESSION_SECRET      # node -e "console.log(crypto.randomBytes(32).toString('base64url'))"
 npx wrangler secret put AWS_ACCESS_KEY_ID   # the AWS_* values come from .env after `neon deploy`

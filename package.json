@@ -16,6 +16,7 @@
 		"test": "npm run test:unit -- --run",
 		"gen": "node -e \"require('fs').rmSync('.svelte-kit/cloudflare',{recursive:true,force:true})\" && wrangler types",
 		"db:migrate": "tsx --env-file-if-exists=.env scripts/db.ts migrate",
+		"db:app-role": "tsx --env-file-if-exists=.env scripts/db.ts app-role",
 		"import:legacy": "tsx --env-file-if-exists=.env scripts/import-legacy.ts",
 		"legacy:convert": "node scripts/legacy/convert.mjs ../Warmelo && prettier --write \"src/routes/(site)\" src/lib/site/components",
 		"legacy:parity": "node scripts/legacy/parity.mjs ../Warmelo http://localhost:5173"
