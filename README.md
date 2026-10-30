@@ -3,7 +3,7 @@
 The Kasteel Warmelo website and its CMS in one SvelteKit app: the public site is server-rendered from
 content in Neon Postgres, and `/admin` is where the client edits it with a live preview.
 
-- **Stack:** SvelteKit 3 (Svelte 5) · Neon Postgres · Neon Object Storage · Cloudflare Workers
+- **Stack:** SvelteKit 3 (Svelte 5) · Neon Postgres · Cloudflare Workers + R2
 - **Languages:** Dutch at `/`, English at `/en/…`, German at `/de/…`
 - **Admin:** `/admin`, one shared password
 
@@ -18,7 +18,7 @@ editor  ──► /admin            forms + live preview (/…?preview, with dra
                  └─────────────────┼───────────────────────────────────────────────────┘
                                    ▼
                      Neon Postgres (content, drafts, history, messages)
-                     Neon Object Storage (uploaded images/videos, served via /media/…)
+                     Cloudflare R2 (uploaded images/videos, served via /media/…)
 ```
 
 **Content model.** Every editable spot has a key. Translated texts are stored per language
@@ -52,7 +52,7 @@ src/
   routes/(site)/[[lang=lang]]/…   public pages, one +page.svelte each (generated from the old site)
   routes/admin/                   editor, login, inbox (Berichten) and the admin API
   routes/api/contact/             contact form → messages
-  routes/media/[...key]/          serves uploads from the private bucket (edge-cached)
+  routes/media/[...key]/          serves uploads from the private R2 bucket (edge-cached)
   lib/site/                       Site (content resolution), pages/URLs, seasons, shared Nav/Footer
   lib/content/                    defaults.json (original content), fields.json (what the admin edits)
   lib/admin/                      editor state, field editors, admin styles
@@ -61,6 +61,7 @@ src/
 scripts/
   db.ts                           migrations
   import-legacy.ts                import content saved in the old Netlify CMS
+  s3.ts                           S3 client for scripts (R2's S3 API)
   legacy/convert.mjs              one-off: generated the pages/defaults/fields from the static site
   legacy/parity.mjs               checks the site against the old static site
 static/assets/                    the site's CSS, images, videos and warmelo.min.js
@@ -75,8 +76,8 @@ npm run dev               # http://localhost:5173 — admin at /admin
 ```
 
 Without `DATABASE_URL`, dev uses a local Postgres (PGlite) in `.data/` that migrates itself. Delete
-`.data/` to start over. Uploads need Neon Object Storage credentials (see below); everything else
-works offline.
+`.data/` to start over. Uploads go to a local R2 bucket in `.wrangler/state`, so everything works
+offline.
 
 | Command                     | Does                                                        |
 | --------------------------- | ----------------------------------------------------------- |
@@ -91,12 +92,11 @@ works offline.
 
 ## Neon
 
-Create the project in region **`aws-eu-central-1`** (Object Storage is only available in some
-regions, and this one is close to the Netherlands). Then, signed in with the DRP account:
+Create the project in region **`aws-eu-central-1`** (close to the Netherlands). Then, signed in
+with the DRP account:
 
 ```sh
 neon link --org-id <org> --project-name warmelo --region-id aws-eu-central-1
-neon deploy               # creates the "media" bucket from neon.ts, pulls credentials into .env
 npm run db:migrate        # creates the tables
 npm run db:app-role       # creates the limited "warmelo_app" role, writes APP_DATABASE_URL to .env
 ```
@@ -114,10 +114,7 @@ npx wrangler login
 npx wrangler secret put DATABASE_URL        # the APP_DATABASE_URL value from .env, not the owner one
 npx wrangler secret put ADMIN_PASSWORD
 npx wrangler secret put SESSION_SECRET      # node -e "console.log(crypto.randomBytes(32).toString('base64url'))"
-npx wrangler secret put AWS_ACCESS_KEY_ID   # the AWS_* values come from .env after `neon deploy`
-npx wrangler secret put AWS_SECRET_ACCESS_KEY
-npx wrangler secret put AWS_ENDPOINT_URL_S3
-npx wrangler secret put AWS_REGION
+npx wrangler r2 bucket create kasteel-warmelo-media --location weur   # uploads (binding MEDIA)
 npm run build && npx wrangler deploy
 ```
 
@@ -132,7 +129,7 @@ Then point the domain at the Worker. Old URLs keep working: `/tuinen.html?lang=e
    npm run import:legacy -- https://kasteelwarmelo.nl
    npm run import:legacy -- https://kasteelwarmelo.nl --apply
    ```
-   Old uploads (`/api/cms-img?id=…`) are copied into Neon Object Storage.
+   Old uploads (`/api/cms-img?id=…`) are copied into R2 (needs an R2 API token, see `.env.example`).
 3. Check the site and switch the domain.
 
 ## Changing the site

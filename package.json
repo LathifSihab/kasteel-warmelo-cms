@@ -14,7 +14,7 @@
 		"format": "prettier --write .",
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run",
-		"gen": "node -e \"require('fs').rmSync('.svelte-kit/cloudflare',{recursive:true,force:true})\" && wrangler types",
+		"gen": "node -e \"require('fs').rmSync('.svelte-kit/cloudflare',{recursive:true,force:true})\" && wrangler types --env-file .env.example",
 		"db:migrate": "tsx --env-file-if-exists=.env scripts/db.ts migrate",
 		"db:app-role": "tsx --env-file-if-exists=.env scripts/db.ts app-role",
 		"import:legacy": "tsx --env-file-if-exists=.env scripts/import-legacy.ts",

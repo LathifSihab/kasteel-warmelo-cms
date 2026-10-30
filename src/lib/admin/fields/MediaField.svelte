@@ -98,7 +98,7 @@
 		{/if}
 	</div>
 	{#if !ed.storage}<p class="hint">
-			Uploaden kan zodra de opslag (Neon Object Storage) is ingesteld.
+			Uploaden kan zodra de opslag (Cloudflare R2) is ingesteld.
 		</p>{/if}
 	{#if error}<p class="error">{error}</p>{/if}
 

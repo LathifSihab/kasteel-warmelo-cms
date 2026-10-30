@@ -4,15 +4,16 @@
 //   npx tsx --env-file=.env scripts/import-legacy.ts https://kasteelwarmelo.nl --apply  # write
 //   npx tsx --env-file=.env scripts/import-legacy.ts ./cms-export.json --apply          # from a file
 //
-// Uploaded images (/api/cms-img?id=…) are copied into Neon Object Storage when the AWS_* variables
-// are set; otherwise they keep pointing at the old site and are listed as warnings.
+// Uploaded images (/api/cms-img?id=…) are copied into the R2 bucket when the AWS_* variables (an
+// R2 API token for its S3 API, see .env.example) are set; otherwise they keep pointing at the old
+// site and are listed as warnings.
 import { readFileSync } from 'node:fs';
 import { editableKeys } from '../src/lib/content/fields.ts';
 import { publishDrafts, saveDrafts, type Change } from '../src/lib/server/content.ts';
-import { createS3 } from '../src/lib/server/s3.ts';
 import { parseLegacyHref } from '../src/lib/site/pages.ts';
 import type { ButtonSettings } from '../src/lib/site/site.ts';
 import { connect } from './db.ts';
+import { createS3 } from './s3.ts';
 
 type Json = Record<string, unknown>;
 const [source, ...flags] = process.argv.slice(2);
@@ -80,7 +81,7 @@ events.forEach((e, i) => {
 	if (e.hidden) put(`event:${n}:hidden`, '*', 'true');
 });
 
-// ── media: copy old uploads into Neon Object Storage
+// ── media: copy old uploads into the R2 bucket
 const env = process.env;
 const s3 =
 	env.AWS_ACCESS_KEY_ID && env.AWS_SECRET_ACCESS_KEY && env.AWS_ENDPOINT_URL_S3
@@ -89,7 +90,7 @@ const s3 =
 				secretAccessKey: env.AWS_SECRET_ACCESS_KEY,
 				endpoint: env.AWS_ENDPOINT_URL_S3,
 				region: env.AWS_REGION,
-				bucket: env.MEDIA_BUCKET || 'media'
+				bucket: env.MEDIA_BUCKET || 'kasteel-warmelo-media'
 			})
 		: undefined;
 const { db, where } = connect();

@@ -9,8 +9,8 @@ export interface S3Config {
 }
 
 /**
- * Minimal client for Neon Object Storage (S3-compatible, path-style, SigV4).
- * No SvelteKit imports, so scripts can use it too.
+ * Minimal S3 client (path-style, SigV4) for scripts, e.g. R2's S3 API. The site itself
+ * uses the R2 binding (src/lib/server/storage.ts).
  */
 export function createS3(config: S3Config) {
 	const aws = new AwsClient({

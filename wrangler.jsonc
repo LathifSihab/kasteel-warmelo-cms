@@ -8,6 +8,8 @@
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
 	},
+	// Uploaded images and videos (served through /media/…). In dev: a local bucket in .wrangler/state.
+	"r2_buckets": [{ "binding": "MEDIA", "bucket_name": "kasteel-warmelo-media" }],
 	// Workers Custom Domains: Cloudflare creates the DNS records and certificates on deploy
 	"routes": [
 		{ "pattern": "kasteelwarmelo.nl", "custom_domain": true },
