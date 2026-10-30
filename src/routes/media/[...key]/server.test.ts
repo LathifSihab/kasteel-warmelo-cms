@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-const getObject = vi.fn<(key: string) => Promise<Response>>();
+type R2Like = { body: ReadableStream; size: number; httpEtag: string; httpMetadata: object };
+const getObject = vi.fn<(key: string) => Promise<R2Like | null>>();
 vi.mock('#lib/server/storage.ts', () => ({ getObject, storageConfigured: () => true }));
 vi.mock('cloudflare:workers', () => ({ waitUntil: (p: Promise<unknown>) => p }));
 
@@ -32,8 +33,13 @@ vi.stubGlobal('caches', {
 const { GET } = await import('./+server.ts');
 
 const KEY = 'uploads/2026/7e200be7-4afa-4125-ac31-be9528899aaa.webp';
-const image = () =>
-	new Response('img', { headers: { 'content-type': 'image/webp', 'content-length': '3' } });
+// an R2 object as the MEDIA binding returns it
+const image = (): R2Like => ({
+	body: new Response('img').body!,
+	size: 3,
+	httpEtag: '"e1"',
+	httpMetadata: { contentType: 'image/webp' }
+});
 const get = (query = '') => {
 	const request = new Request(`https://kasteelwarmelo.nl/media/${KEY}${query}`);
 	const event = { params: { key: KEY }, request, url: new URL(request.url) };
@@ -50,8 +56,11 @@ beforeEach(() => {
 describe('GET /media/…', () => {
 	// The adapter passes no `platform`, so nothing was ever cached and every view hit the bucket
 	it('fetches a file from the bucket once, then serves it from the edge cache', async () => {
-		getObject.mockResolvedValue(image());
-		expect((await get()).status).toBe(200);
+		getObject.mockImplementation(async () => image());
+		const first = await get();
+		expect(first.status).toBe(200);
+		expect(first.headers.get('content-type')).toBe('image/webp');
+		expect(first.headers.get('content-length')).toBe('3');
 		const again = await get('?t=2');
 		expect(again.status).toBe(200);
 		expect(await again.text()).toBe('img');
@@ -60,25 +69,9 @@ describe('GET /media/…', () => {
 		expect(() => again.headers.set('x-content-type-options', 'nosniff')).not.toThrow();
 	});
 
-	// The bucket answered ~1 in 3 requests from Cloudflare with an error, shown to visitors as a 502
-	it('retries a failed bucket request', async () => {
-		getObject
-			.mockResolvedValueOnce(new Response('busy', { status: 503 }))
-			.mockRejectedValueOnce(new Error('network'))
-			.mockResolvedValueOnce(image());
-		expect((await get()).status).toBe(200);
-		expect(getObject).toHaveBeenCalledTimes(3);
-	});
-
-	it('gives up after three tries and does not cache the failure', async () => {
-		getObject.mockImplementation(async () => new Response('busy', { status: 503 }));
-		expect((await get()).status).toBe(502);
-		expect(stored.size).toBe(0);
-	});
-
-	it('does not retry a missing file', async () => {
-		getObject.mockResolvedValue(new Response(null, { status: 404 }));
+	it('answers 404 for a missing file and does not cache it', async () => {
+		getObject.mockResolvedValue(null);
 		expect((await get()).status).toBe(404);
-		expect(getObject).toHaveBeenCalledTimes(1);
+		expect(stored.size).toBe(0);
 	});
 });
