@@ -25,3 +25,4 @@ vite.config.ts.timestamp-*
 # Local dev database (PGlite) and logs
 /.data
 *.log
+.neon

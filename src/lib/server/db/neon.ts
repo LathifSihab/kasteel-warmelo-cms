@@ -9,7 +9,9 @@ export function createNeonDb(url: string): Db {
 			return (await sql.query(text, params)) as T[];
 		},
 		async transaction(statements) {
-			await sql.transaction(statements.map((s) => sql.query(s.text, s.params ?? [])));
+			return (await sql.transaction(
+				statements.map((s) => sql.query(s.text, s.params ?? []))
+			)) as Record<string, unknown>[][];
 		}
 	};
 }

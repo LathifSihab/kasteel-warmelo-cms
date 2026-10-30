@@ -1,6 +1,6 @@
 import { error, json } from '@sveltejs/kit';
 import { getDb } from '#lib/server/db/index.ts';
-import { allow } from '#lib/server/rate-limit.ts';
+import { allow, clientKey } from '#lib/server/rate-limit.ts';
 import type { RequestHandler } from './$types';
 
 const LIMITS = { fname: 100, lname: 100, email: 200, phone: 50, subject: 100, message: 5000 };
@@ -20,7 +20,7 @@ export const POST: RequestHandler = async ({ request, getClientAddress }) => {
 		error(400, 'Naam, e-mail en bericht zijn verplicht');
 
 	const db = await getDb();
-	if (!(await allow(db, 'contact:' + getClientAddress(), 5, 60)))
+	if (!(await allow(db, 'contact:' + clientKey(getClientAddress()), 5, 60)))
 		error(429, 'Te veel berichten, probeer het later opnieuw');
 
 	await db.query(
