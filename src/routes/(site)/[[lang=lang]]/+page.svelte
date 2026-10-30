@@ -22,7 +22,7 @@
 			muted
 			loop
 			playsinline
-			poster="/assets/images/dji_fly_20241108_182220_103_1731087789639_photo.webp"
+			poster={c.img('index-hero')}
 			preload="metadata"
 			data-edit={c.edit('video:index-hero-video')}
 		>

@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { toPlain } from './html.ts';
 import { DEFAULTS, Site, telHref, type Content } from './site.ts';
@@ -111,8 +112,26 @@ describe('values', () => {
 		expect(site().imgStyle('zand-was')).toBe('object-position:55.2% 0.0%');
 		expect(site().imgHeight('zand-was')).toBe('440px');
 		const over = { texts: {}, values: { 'fit:zand-was': '{"pos":"50% 50%","scale":1.2}' } };
-		expect(site(over).imgStyle('zand-was')).toContain('--cms-scale:1.2');
+		expect(site(over).imgStyle('zand-was')).toBe(
+			'object-position:50% 50%;scale:1.2;transform-origin:50% 50%'
+		);
 		expect(site(over).imgClass('zand-was', '')).toBe('cms-scaled');
 		expect(site(over).imgHeight('zand-was')).toBeUndefined();
+	});
+
+	it('crops background images too', () => {
+		const id = 'tuinen-bg-new-english-garden-panoramic';
+		expect(site().bgStyle(id)).toBe(`background-image:url('${DEFAULTS.values['img:' + id]}')`);
+		const over = { texts: {}, values: { ['fit:' + id]: '{"pos":"20% 80%","scale":1.3}' } };
+		expect(site(over).bgStyle(id)).toContain(
+			'background-position:20% 80%;scale:1.3;transform-origin:20% 80%'
+		);
+	});
+
+	// Zoom is the `scale` property so it adds to the page's own transforms (hover, Ken Burns,
+	// parallax). A stylesheet `transform` on .cms-scaled would scale twice.
+	it('leaves zoom to the inline scale property', () => {
+		const css = readFileSync('static/assets/css/warmelo.min.css', 'utf8');
+		expect(css).not.toMatch(/cms-scaled[^{]*\{[^}]*transform\s*:/);
 	});
 });

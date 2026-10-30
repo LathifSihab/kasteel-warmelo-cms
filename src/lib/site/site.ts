@@ -146,19 +146,29 @@ export class Site {
 	fit(id: string): ImageFit {
 		return parseJson<ImageFit>(this.v('fit:' + id)) ?? {};
 	}
+	/**
+	 * Zoom as the `scale` property rather than `transform`, so it adds to the page's
+	 * own transforms (hover zoom, Ken Burns, parallax) instead of losing to them.
+	 */
+	private zoom(f: ImageFit): string[] {
+		return f.scale && f.scale > 1.01
+			? [`scale:${f.scale}`, `transform-origin:${f.pos || '50% 50%'}`]
+			: [];
+	}
 	/** The image's own inline style (`base`) plus its crop. */
 	imgStyle(id: string, base = ''): string | undefined {
 		const f = this.fit(id);
 		const css = base ? [base.replace(/;\s*$/, '')] : [];
 		if (f.pos) css.push(`object-position:${f.pos}`);
-		if (f.scale && f.scale > 1.01) {
-			css.push(
-				`--cms-scale:${f.scale}`,
-				`--cms-scale-hover:${(f.scale * 1.07).toFixed(3)}`,
-				`--cms-origin:${f.pos || '50% 50%'}`
-			);
-		}
+		css.push(...this.zoom(f));
 		return css.length ? css.join(';') : undefined;
+	}
+	/** Inline style of an element showing the image as its background, with its crop. */
+	bgStyle(id: string): string {
+		const f = this.fit(id);
+		const css = [`background-image:${this.bg(id)}`];
+		if (f.pos) css.push(`background-position:${f.pos}`);
+		return [...css, ...this.zoom(f)].join(';');
 	}
 	imgClass(id: string, cls: string): string | undefined {
 		const scaled = (this.fit(id).scale ?? 1) > 1.01;
