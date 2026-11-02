@@ -48,6 +48,13 @@ export const FIELDS = json as { pages: PageFields[]; shared: Section[] };
 
 export const isTranslated = (f: Field) => f.type === 'text' || f.type === 'rich';
 
+/**
+ * The sections the admin can reorder: all but the page's header (the first) and its
+ * search-engine fields, which aren't a block on the page. Saved under `order:<page>`.
+ */
+export const movableSections = (p: PageFields) =>
+	p.sections.slice(1).filter((s) => !s.id.endsWith('-seo'));
+
 export function allFields(): Field[] {
 	return [...FIELDS.shared, ...FIELDS.pages.flatMap((p) => p.sections)].flatMap((s) => s.fields);
 }
@@ -60,5 +67,6 @@ export function editableKeys(): Map<string, 'translated' | 'neutral'> {
 		if (f.labelKey) keys.set(f.labelKey, 'translated');
 		if (f.type === 'image') keys.set('fit:' + f.key.slice(4), 'neutral');
 	}
+	for (const p of FIELDS.pages) keys.set('order:' + p.id, 'neutral');
 	return keys;
 }

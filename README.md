@@ -33,6 +33,7 @@ editor  ──► /admin            forms + live preview (/…?preview, with dra
 | `img:index-hero`, `fit:…`      | image URL and its crop (JSON: focus point, zoom, frame height)        |
 | `link:facebook`                | external links                                                        |
 | `menuprice:koffie`             | menu prices                                                           |
+| `order:evenementen`            | the page's section order (JSON list of `fields.json` section ids)     |
 
 The **original site** is the fallback for every key (`src/lib/content/defaults.json`), so the
 database only holds what the client changed, and "↺ Origineel" simply deletes the saved value. A
@@ -44,6 +45,10 @@ published change is recorded in `content_history`.
 
 **Seasonal buttons.** A button can have a second link and label for a date window (e.g. winter),
 optionally repeating every year. The switch happens at midnight Dutch time.
+
+**Section order.** Each block below a page's header is a snippet named after its `fields.json`
+section (`s4` = `evenementen-4`), rendered through `c.ordered({ … })`. The admin's ↑/↓ buttons save
+the order under `order:<page>`; the header stays first.
 
 ## Project layout
 
@@ -138,6 +143,8 @@ Then point the domain at the Worker. Old URLs keep working: `/tuinen.html?lang=e
 - **Make something editable:** call `c.t('new.key')` (translated) or `c.v('cms:new-key')` in the
   page, add the original text to `defaults.json`, and add a field to `fields.json` in the right
   section. The admin, preview, draft and publish flow pick it up automatically.
+- **New section on a page:** add it to the page as a `{#snippet sN()}` and to its `c.ordered({ … })`,
+  and add the matching section to `fields.json` in the same position. A test checks the two match.
 - **New table or column:** append a migration to `src/lib/server/db/migrations.ts` (never edit an
   applied one) and run `npm run db:migrate`.
 

@@ -86,23 +86,52 @@
 		</div>
 		<div class="sections">
 			{#each ed.sections as { group, section, fields }, i (section.id)}
-				{#if i === 0 || ed.sections[i - 1].group !== group}<h2 class="group">{group}</h2>{/if}
+				{#if i === 0 || ed.sections[i - 1].group !== group}<h2 class="group">
+						{group}
+						{#if i === 0 && ed.isCustom(ed.orderKey, '*')}<button
+								type="button"
+								class="link"
+								onclick={() => ed.set(ed.orderKey, '*', null, { reload: true })}
+								>↺ Originele volgorde</button
+							>{/if}
+					</h2>{/if}
 				{@const open = !!ed.open[section.id] || !!ed.query}
+				{@const place = ed.query ? -1 : ed.order.indexOf(section.id)}
 				{@const changed = fields.filter((f) =>
 					ed.isDraft(f.key, f.type === 'text' || f.type === 'rich' ? ed.lang : '*')
 				).length}
 				<section class="sec">
-					<button
-						type="button"
-						class="sec-head"
-						aria-expanded={open}
-						onclick={() => (ed.open[section.id] = !open)}
-					>
-						<span>{section.title}</span>
-						<span class="count"
-							>{#if changed}<span class="changed">●</span>{/if}{fields.length}</span
+					<div class="sec-row">
+						<button
+							type="button"
+							class="sec-head"
+							aria-expanded={open}
+							onclick={() => (ed.open[section.id] = !open)}
 						>
-					</button>
+							<span>{section.title}</span>
+							<span class="count"
+								>{#if changed}<span class="changed">●</span>{/if}{fields.length}</span
+							>
+						</button>
+						{#if place >= 0}
+							<span class="move">
+								<button
+									type="button"
+									title="Naar boven op de pagina"
+									aria-label="{section.title} naar boven"
+									disabled={place === 0}
+									onclick={() => ed.move(section.id, -1)}>↑</button
+								>
+								<button
+									type="button"
+									title="Naar beneden op de pagina"
+									aria-label="{section.title} naar beneden"
+									disabled={place === ed.order.length - 1}
+									onclick={() => ed.move(section.id, 1)}>↓</button
+								>
+							</span>
+						{/if}
+					</div>
 					{#if open}
 						<div class="sec-body">
 							{#each fields as field (field.key)}<FieldRow {field} />{/each}

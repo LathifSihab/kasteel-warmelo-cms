@@ -218,8 +218,49 @@ button:disabled,
 	text-transform: uppercase;
 	color: var(--gold);
 }
+.group {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.group .link {
+	letter-spacing: 0;
+	text-transform: none;
+	font-weight: 400;
+}
 .sec {
 	border-bottom: 1px solid var(--line);
+}
+/* section header, plus ↑/↓ to move it on the page */
+.sec-row {
+	display: flex;
+	align-items: center;
+}
+.sec-row .sec-head {
+	flex: 1;
+	min-width: 0;
+}
+.move {
+	display: flex;
+	gap: 3px;
+	padding-right: 10px;
+}
+.move button {
+	width: 26px;
+	height: 26px;
+	padding: 0;
+	background: none;
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	border-radius: var(--r);
+	color: var(--m);
+}
+.move button:hover:not(:disabled) {
+	border-color: var(--gold);
+	color: var(--gold-l);
+}
+.move button:disabled {
+	opacity: 0.3;
+	cursor: default;
 }
 .sec-head {
 	display: flex;

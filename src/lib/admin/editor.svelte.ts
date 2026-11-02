@@ -1,7 +1,7 @@
 import { getContext, setContext, tick } from 'svelte';
-import { FIELDS, type Field, type Section } from '#lib/content/fields.ts';
+import { FIELDS, movableSections, type Field, type Section } from '#lib/content/fields.ts';
 import { pathFor, type Lang, type PageId } from '#lib/site/pages.ts';
-import { DEFAULTS, type Content } from '#lib/site/site.ts';
+import { applyOrder, DEFAULTS, type Content } from '#lib/site/site.ts';
 
 export type StoredLang = Lang | '*';
 type DraftRow = { key: string; lang: StoredLang; value: string | null };
@@ -150,7 +150,26 @@ export class Editor {
 	get pageFields() {
 		return FIELDS.pages.find((p) => p.id === this.page)!;
 	}
-	/** Page sections first, then what every page shares; filtered by the search box. */
+	get orderKey(): string {
+		return 'order:' + this.page;
+	}
+	/** The page's movable section ids, in the order the preview shows them. */
+	get order(): string[] {
+		const ids = movableSections(this.pageFields).map((s) => s.id);
+		return applyOrder(ids, this.get(this.orderKey, '*') || undefined);
+	}
+	/** Moves a section one place up (-1) or down (+1) on the page. */
+	move(id: string, by: -1 | 1) {
+		const order = [...this.order];
+		const i = order.indexOf(id);
+		const j = i + by;
+		if (i < 0 || j < 0 || j >= order.length) return;
+		[order[i], order[j]] = [order[j], order[i]];
+		const original = movableSections(this.pageFields).map((s) => s.id);
+		const same = order.every((s, k) => s === original[k]);
+		this.set(this.orderKey, '*', same ? null : JSON.stringify(order), { reload: true });
+	}
+	/** Page sections first (in their page order), then what every page shares; filtered by the search box. */
 	get sections(): { group: string; section: Section; fields: Field[] }[] {
 		const q = this.query.trim().toLowerCase();
 		const match = (f: Field) =>
@@ -162,8 +181,15 @@ export class Editor {
 			)
 				.toLowerCase()
 				.includes(q);
+		const { sections } = this.pageFields;
+		const order = this.order;
+		// header first, then the movable sections in page order, then the search-engine fields
+		const rank = (s: Section) =>
+			order.includes(s.id) ? order.indexOf(s.id) + 1 : s === sections[0] ? 0 : order.length + 1;
 		return [
-			...this.pageFields.sections.map((s) => ({ group: this.pageFields.name, section: s })),
+			...[...sections]
+				.sort((a, b) => rank(a) - rank(b))
+				.map((s) => ({ group: this.pageFields.name, section: s })),
 			...FIELDS.shared.map((s) => ({ group: 'Hele website', section: s }))
 		]
 			.map((x) => ({ ...x, fields: x.section.fields.filter(match) }))
