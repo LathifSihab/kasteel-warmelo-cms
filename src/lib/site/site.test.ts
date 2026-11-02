@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { toPlain } from './html.ts';
-import { DEFAULTS, Site, telHref, type Content } from './site.ts';
+import { DEFAULTS, Site, applyOrder, telHref, type Content } from './site.ts';
 
 const empty: Content = { texts: {}, values: {} };
 const site = (over: Content = empty, lang: 'nl' | 'en' | 'de' = 'nl', today = '2026-12-15') =>
@@ -133,5 +133,28 @@ describe('values', () => {
 	it('leaves zoom to the inline scale property', () => {
 		const css = readFileSync('static/assets/css/warmelo.min.css', 'utf8');
 		expect(css).not.toMatch(/cms-scaled[^{]*\{[^}]*transform\s*:/);
+	});
+});
+
+describe('section order', () => {
+	const ids = { a: 'A', b: 'B', c: 'C' };
+	const saved = (v: string) => site({ texts: {}, values: { 'order:index': v } });
+
+	it('keeps the page order until one is saved', () => {
+		expect(site().ordered(ids)).toEqual(['A', 'B', 'C']);
+	});
+	it('applies a saved order', () => {
+		expect(saved('["c","a","b"]').ordered(ids)).toEqual(['C', 'A', 'B']);
+	});
+	it('ignores unknown ids and keeps sections added since in their place', () => {
+		// 'b' is not in the saved order: it stays after 'a', as on the page
+		expect(saved('["c","gone","a"]').ordered(ids)).toEqual(['C', 'A', 'B']);
+		// 'a' leads the page so stays first; 'c' follows 'b' on the page so it follows it here
+		expect(applyOrder(['a', 'b', 'c', 'd'], '["d","b"]')).toEqual(['a', 'd', 'b', 'c']);
+	});
+	it('falls back to the page order for broken data, and drops duplicates', () => {
+		expect(saved('{broken').ordered(ids)).toEqual(['A', 'B', 'C']);
+		expect(saved('"a"').ordered(ids)).toEqual(['A', 'B', 'C']);
+		expect(saved('["b","b","a","c"]').ordered(ids)).toEqual(['B', 'A', 'C']);
 	});
 });

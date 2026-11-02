@@ -37,6 +37,23 @@ function parseJson<T>(s: string | undefined): T | undefined {
 	}
 }
 
+/**
+ * The section ids in their saved order (`saved`: a JSON array of ids). Unknown ids
+ * are dropped, and ids missing from it (sections added since) keep their place
+ * after the section that precedes them on the page.
+ */
+export function applyOrder(ids: string[], saved: string | undefined): string[] {
+	const list = parseJson<unknown>(saved);
+	if (!Array.isArray(list)) return ids;
+	const order = [...new Set(list.filter((id): id is string => ids.includes(id as string)))];
+	ids.forEach((id, i) => {
+		if (order.includes(id)) return;
+		const before = ids.slice(0, i).findLast((p) => order.includes(p));
+		order.splice(before ? order.indexOf(before) + 1 : 0, 0, id);
+	});
+	return order;
+}
+
 /** "0547 – 352547" → "+31547352547" */
 export function telHref(phone: string): string {
 	const d = phone.replace(/[^\d+]/g, '');
@@ -84,6 +101,12 @@ export class Site {
 	}
 	edit(key: string): string | undefined {
 		return this.preview ? key : undefined;
+	}
+	/** The page's movable sections (id → what renders it), in the order saved under `order:<page>`. */
+	ordered<T>(sections: Record<string, T>): T[] {
+		return applyOrder(Object.keys(sections), this.over.values['order:' + this.page]).map(
+			(id) => sections[id]
+		);
 	}
 
 	// ── links ──

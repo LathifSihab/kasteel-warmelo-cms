@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { FIELDS } from './fields.ts';
+import { FIELDS, editableKeys, movableSections } from './fields.ts';
 
 const source = (page: string) =>
 	readFileSync(
@@ -26,5 +26,19 @@ describe('image fields ↔ pages', () => {
 
 	it.each(images)('$page: $id offers a height only if the page applies it', ({ page, id, f }) => {
 		expect(!!f.height).toBe(calls(source(page), 'imgHeight', id));
+	});
+});
+
+// The admin moves a page's sections; the page must render each of them through c.ordered()
+describe('section order ↔ pages', () => {
+	it.each(FIELDS.pages)('$id renders its movable sections in fields.json order', (p) => {
+		const call = source(p.id).match(/c\.ordered\(\s*\{([^}]*)\}\s*\)/);
+		expect(call, 'page has no c.ordered({...})').not.toBeNull();
+		const ids = [...call![1].matchAll(/'([^']+)':/g)].map((m) => m[1]);
+		expect(ids).toEqual(movableSections(p).map((s) => s.id));
+	});
+
+	it('lets the admin save each page order', () => {
+		for (const p of FIELDS.pages) expect(editableKeys().get('order:' + p.id)).toBe('neutral');
 	});
 });
