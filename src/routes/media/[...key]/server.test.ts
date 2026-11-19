@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 type R2Like = { body: ReadableStream; size: number; httpEtag: string; httpMetadata: object };
 const getObject = vi.fn<(key: string) => Promise<R2Like | null>>();
 vi.mock('#lib/server/storage.ts', () => ({ getObject, storageConfigured: () => true }));
-vi.mock('cloudflare:workers', () => ({ waitUntil: (p: Promise<unknown>) => p }));
+// `waitUntil` comes from the adapter's stand-in for cloudflare:workers, a no-op in tests
 
 // Cloudflare's edge cache, keyed by URL. Like the real one, it hands back immutable headers.
 const stored = new Map<string, Response>();

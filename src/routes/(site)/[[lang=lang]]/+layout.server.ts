@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 import { getDb } from '#lib/server/db/index.ts';
 import { loadContent } from '#lib/server/content.ts';
+import { publishedContent } from '#lib/server/published.ts';
 import { parsePath } from '#lib/site/pages.ts';
 import { todayInNL } from '#lib/site/season.ts';
 import type { LayoutServerLoad } from './$types';
@@ -17,6 +18,9 @@ export const load: LayoutServerLoad = async ({ url, locals }) => {
 		preview,
 		origin: url.origin,
 		today: todayInNL(),
-		content: await loadContent(await getDb(), preview ? locals.session!.sid : undefined)
+		// visitors: from KV, without waking the database; the preview needs this session's drafts
+		content: preview
+			? await loadContent(await getDb(), locals.session!.sid)
+			: await publishedContent(getDb)
 	};
 };
