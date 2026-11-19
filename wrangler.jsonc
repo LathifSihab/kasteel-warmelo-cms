@@ -10,6 +10,9 @@
 	},
 	// Uploaded images and videos (served through /media/…). In dev: a local bucket in .wrangler/state.
 	"r2_buckets": [{ "binding": "MEDIA", "bucket_name": "kasteel-warmelo-media" }],
+	// Published content for visitors, so page views don't wake the database (src/lib/server/published.ts).
+	// No id: `wrangler deploy` creates the namespace the first time.
+	"kv_namespaces": [{ "binding": "CONTENT" }],
 	// Workers Custom Domains: Cloudflare creates the DNS records and certificates on deploy
 	"routes": [
 		{ "pattern": "kasteelwarmelo.nl", "custom_domain": true },

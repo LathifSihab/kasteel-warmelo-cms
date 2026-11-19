@@ -1,6 +1,8 @@
+import { waitUntil } from 'cloudflare:workers';
 import { loadContent, loadDrafts } from '#lib/server/content.ts';
 import { getDb } from '#lib/server/db/index.ts';
 import { requireSession } from '#lib/server/guard.ts';
+import { refreshPublished } from '#lib/server/published.ts';
 import { storageConfigured } from '#lib/server/storage.ts';
 import type { PageServerLoad } from './$types';
 
@@ -12,5 +14,7 @@ export const load: PageServerLoad = async ({ locals }) => {
 		loadDrafts(db, sid),
 		db.query<{ n: number }>('select count(*)::int as n from messages where read_at is null')
 	]);
+	// keeps the visitors' copy in step, also after changes made outside the admin
+	waitUntil(refreshPublished(db, published));
 	return { published, drafts, unread: n, storage: storageConfigured() };
 };

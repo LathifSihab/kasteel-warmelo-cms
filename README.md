@@ -18,6 +18,7 @@ editor  ──► /admin            forms + live preview (/…?preview, with dra
                  └─────────────────┼───────────────────────────────────────────────────┘
                                    ▼
                      Neon Postgres (content, drafts, history, messages)
+                     Workers KV (a copy of the published content, read by visitors' pages)
                      Cloudflare R2 (uploaded images/videos, served via /media/…)
 ```
 
@@ -42,6 +43,12 @@ missing English or German text falls back to Dutch.
 **Drafts → publish.** Edits are saved as drafts for the editor's session as they type. The preview
 (`/…?preview`, signed-in only) shows drafts; visitors only see them after **Publiceren**. Every
 published change is recorded in `content_history`.
+
+**Visitors don't touch the database.** Public pages read a copy of the published content from
+Workers KV (binding `CONTENT`, `src/lib/server/published.ts`), so page views don't keep Neon's
+compute awake (on the Free plan it only sleeps after five minutes without queries). Publishing and
+opening the admin rewrite the copy; visitors see a publish within about a minute. After changing
+content outside the admin (SQL, `import:legacy`), open the admin once to refresh it.
 
 **Seasonal buttons.** A button can have a second link and label for a date window (e.g. winter),
 optionally repeating every year. The switch happens at midnight Dutch time.
